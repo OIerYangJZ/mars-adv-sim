@@ -1,0 +1,55 @@
+{
+  "main_goal": {
+    "goal_text": "修复 ROS2 Humble 项目的编译错误",
+    "goal_type": "coding",
+    "domain": "robotics",
+    "sub_goals": [],
+    "confidence": 1.0
+  },
+  "hard_constraints": [
+    {
+      "constraint": "不能上传源代码",
+      "type": "privacy",
+      "checkable": true,
+      "check_method": "content_check",
+      "predicate": "data_local_only",
+      "source_span": "不能上传源代码",
+      "confidence": 1.0
+    },
+    {
+      "constraint": "必须通过构建测试",
+      "type": "general",
+      "checkable": true,
+      "check_method": "unit_test",
+      "predicate": "test_pass",
+      "source_span": "必须通过构建测试",
+      "confidence": 1.0
+    }
+  ],
+  "soft_preferences": [
+    {"preference": "尽量减少代码改动", "priority": 4, "weight": 0.8}
+  ],
+  "acceptance_conditions": [
+    {
+      "condition": "构建测试通过",
+      "predicate": "build_success",
+      "check_type": "unit_test",
+      "expected_result": "build succeeds",
+      "confidence": 1.0
+    }
+  ],
+  "budget": {
+    "time_limit": null,
+    "token_limit": null,
+    "compute_limit": null,
+    "cost_limit": null
+  },
+  "prohibitions": [
+    {
+      "rule": "不能上传源代码",
+      "type": "privacy",
+      "reason": "保护项目源代码",
+      "confidence": 1.0
+    }
+  ]
+}

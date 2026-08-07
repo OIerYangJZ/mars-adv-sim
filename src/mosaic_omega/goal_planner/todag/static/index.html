@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToDAG 控制台</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --ink: #17212b;
+      --muted: #66717d;
+      --line: #d8dee5;
+      --teal: #087f8c;
+      --teal-soft: #e4f4f5;
+      --green: #2f7d4a;
+      --green-soft: #e7f4eb;
+      --amber: #a86100;
+      --amber-soft: #fff1d6;
+      --red: #b33a3a;
+      --red-soft: #fbe9e9;
+      --charcoal: #24313d;
+      --radius: 6px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+    button, textarea, input { font: inherit; letter-spacing: 0; }
+    button {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--ink);
+      padding: 6px 11px;
+      cursor: pointer;
+    }
+    button:hover { border-color: #9da8b3; background: #f8fafb; }
+    button:focus-visible, textarea:focus-visible, input:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 1px;
+    }
+    button.primary { border-color: var(--teal); background: var(--teal); color: white; }
+    button.primary:hover { background: #066c77; }
+    button.danger { color: var(--red); }
+    button:disabled { cursor: not-allowed; opacity: .5; }
+    .app {
+      display: grid;
+      grid-template-rows: 52px minmax(0, 1fr);
+      height: 100vh;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 16px;
+      background: var(--charcoal);
+      color: white;
+      border-bottom: 1px solid #111a22;
+    }
+    .brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+    .brand h1 { margin: 0; font-size: 18px; font-weight: 650; white-space: nowrap; }
+    .brand span { color: #b9c4cd; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .header-state { display: flex; align-items: center; gap: 10px; font-size: 12px; white-space: nowrap; }
+    .state-dot { width: 8px; height: 8px; border-radius: 50%; background: #98a4af; }
+    .state-dot.ready { background: #56c882; }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(300px, 370px) minmax(420px, 1fr) minmax(280px, 330px);
+      min-height: 0;
+    }
+    aside, .inspector { background: var(--surface); overflow: auto; }
+    aside { border-right: 1px solid var(--line); }
+    .inspector { border-left: 1px solid var(--line); }
+    .section { padding: 14px; border-bottom: 1px solid var(--line); }
+    .section h2 { margin: 0 0 10px; font-size: 13px; font-weight: 650; color: var(--charcoal); }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    textarea, input[type="text"], input[type="number"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfd;
+      color: var(--ink);
+      padding: 9px;
+    }
+    #input-json { min-height: 330px; resize: vertical; font-family: Consolas, monospace; font-size: 12px; line-height: 1.5; }
+    .field { display: grid; gap: 5px; margin-bottom: 10px; }
+    .field label { color: var(--muted); font-size: 11px; font-weight: 600; }
+    .field textarea { min-height: 90px; resize: vertical; }
+    .graph-shell { display: grid; grid-template-rows: 44px minmax(0, 1fr) 32px; min-width: 0; min-height: 0; }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 12px;
+      background: #eef1f4;
+      border-bottom: 1px solid var(--line);
+    }
+    .toolbar-group { display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .toolbar strong { font-size: 12px; white-space: nowrap; }
+    .toolbar input[type="range"] { width: 110px; accent-color: var(--teal); }
+    .graph-viewport { overflow: auto; background: var(--bg); }
+    #dag-svg { display: block; min-width: 100%; min-height: 100%; transform-origin: top left; }
+    .footer-status {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 12px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 11px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .footer-status .error { color: var(--red); overflow: hidden; text-overflow: ellipsis; }
+    .metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .metric { border-left: 3px solid var(--line); padding: 5px 8px; background: #f7f9fa; }
+    .metric strong { display: block; font-size: 18px; font-weight: 650; }
+    .metric span { color: var(--muted); font-size: 10px; }
+    .list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .list li { padding: 7px 8px; border: 1px solid var(--line); border-radius: 4px; font-size: 11px; overflow-wrap: anywhere; }
+    .list li.changed { border-color: var(--red); background: var(--red-soft); }
+    .list li.invalidated { border-color: #d8952d; background: var(--amber-soft); }
+    .list li.preserved { border-color: #86bb98; background: var(--green-soft); }
+    .placeholder { color: var(--muted); font-size: 12px; padding: 4px 0; }
+    .node-rect { fill: var(--surface); stroke: #81909c; stroke-width: 1.5; rx: 6; cursor: pointer; }
+    .node-group:hover .node-rect { stroke: var(--teal); stroke-width: 2.5; }
+    .node-group.selected .node-rect { stroke: var(--charcoal); stroke-width: 3; }
+    .node-group.changed .node-rect { fill: var(--red-soft); stroke: var(--red); }
+    .node-group.invalidated .node-rect { fill: var(--amber-soft); stroke: var(--amber); }
+    .node-group.completed .node-rect { fill: var(--green-soft); stroke: var(--green); }
+    .node-title { font-size: 13px; font-weight: 650; fill: var(--ink); pointer-events: none; }
+    .node-meta { font-size: 10px; fill: var(--muted); pointer-events: none; }
+    .node-id { font-size: 9px; fill: var(--teal); font-family: Consolas, monospace; pointer-events: none; }
+    .edge { fill: none; stroke: #8997a3; stroke-width: 1.5; marker-end: url(#arrow); }
+    .level-label { font-size: 10px; fill: var(--muted); font-weight: 600; }
+    .badge { display: inline-flex; align-items: center; min-height: 22px; padding: 2px 7px; border: 1px solid var(--line); border-radius: 11px; font-size: 10px; color: var(--muted); background: #f8fafb; }
+    @media (max-width: 1080px) {
+      body { overflow: auto; }
+      .app { height: auto; min-height: 100vh; }
+      .workspace { grid-template-columns: 320px minmax(520px, 1fr); grid-template-rows: minmax(650px, calc(100vh - 52px)) auto; }
+      .inspector { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
+      .inspector .section { border-right: 1px solid var(--line); }
+    }
+    @media (max-width: 720px) {
+      .workspace { display: block; }
+      aside, .inspector { border: 0; border-bottom: 1px solid var(--line); }
+      .graph-shell { height: 620px; }
+      .inspector { display: block; }
+      .brand span { display: none; }
+      .header-state #state-text, .header-state #revision { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand"><h1>ToDAG 控制台</h1><span>结构化长任务 · 增量依赖重算</span></div>
+      <div class="header-state"><span id="state-dot" class="state-dot"></span><span id="state-text">未构建</span><span id="revision">rev 0</span></div>
+    </header>
+    <div class="workspace">
+      <aside>
+        <section class="section">
+          <h2>任务输入 JSON</h2>
+          <textarea id="input-json" spellcheck="false"></textarea>
+          <div class="actions" style="margin-top:10px">
+            <button id="build" class="primary">构建 DAG</button><button id="replan">按新 GoalSpec 局部重规划</button>
+            <button id="format">格式化</button>
+            <button id="export">导出 DAG</button>
+          </div>
+        </section>
+        <section class="section">
+          <h2>Coordinator 输出</h2>
+          <div class="actions"><button id="export-coordinator">导出任务列表</button></div>
+        </section>
+      </aside>
+
+      <main class="graph-shell">
+        <div class="toolbar">
+          <div class="toolbar-group"><strong>DAG 拓扑</strong><span id="node-count" class="badge">0 节点</span><span id="edge-count" class="badge">0 边</span></div>
+          <div class="toolbar-group"><label for="zoom" style="font-size:11px;color:var(--muted)">缩放</label><input id="zoom" type="range" min="60" max="140" value="100"><span id="zoom-value" style="font-size:11px;width:34px">100%</span></div>
+        </div>
+        <div id="graph-viewport" class="graph-viewport">
+          <svg id="dag-svg" role="img" aria-label="DAG dynamic visualization"></svg>
+        </div>
+        <div class="footer-status"><span id="topology">拓扑序：-</span><span id="message"></span></div>
+      </main>
+
+      <div class="inspector">
+        <section class="section">
+          <h2>节点编辑</h2>
+          <div id="node-empty" class="placeholder">未选择节点</div>
+          <div id="node-editor" hidden>
+            <div class="field"><label>task_id</label><input id="edit-id" type="text" disabled></div>
+            <div class="field"><label>description</label><textarea id="edit-description"></textarea></div>
+            <div class="field"><label>required_skill</label><input id="edit-skill" type="text"></div>
+            <div class="field"><label>depends_on（逗号分隔）</label><input id="edit-dependencies" type="text"></div>
+            <div class="field"><label>priority</label><input id="edit-priority" type="number" min="1" max="10"></div>
+            <div class="actions"><button id="update-node" class="primary">更新并重算</button><button id="complete-node">标记完成</button></div>
+          </div>
+        </section>
+        <section class="section">
+          <h2>变更范围</h2>
+          <div class="metric-grid">
+            <div class="metric"><strong id="changed-count">0</strong><span>变更</span></div>
+            <div class="metric"><strong id="recomputed-count">0</strong><span>重算</span></div>
+            <div class="metric"><strong id="invalidated-count">0</strong><span>后继失效</span></div>
+            <div class="metric"><strong id="preserved-count">0</strong><span>保留</span></div>
+          </div>
+          <ul id="change-list" class="list" style="margin-top:10px"></ul>
+        </section>
+        <section class="section">
+          <h2>Agent 轨迹</h2>
+          <ul id="agent-list" class="list"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sample = {
+      main_goal: "完成一份经过验收的 RAG 技术调研报告",
+      hard_constraints: ["结论必须有证据支持", "所有产物必须满足验收条件"],
+      soft_preferences: ["优先使用一手技术资料", "报告保持简洁"],
+      acceptance_conditions: ["解释 RAG 架构和数据流", "比较优势、局限和风险", "输出带可验证引用的最终报告"],
+      budget: {time_hours: 12, cost_limit: 100, max_parallel_tasks: 3},
+      prohibitions: ["不得虚构来源", "不得暴露密钥"]
+    };
+    const state = {dag: null, selected: null, zoom: 1};
+    const $ = id => document.getElementById(id);
+    const input = $("input-json");
+    input.value = JSON.stringify(sample, null, 2);
+
+    async function request(path, options = {}) {
+      const response = await fetch(path, {
+        ...options,
+        headers: {"Content-Type": "application/json", ...(options.headers || {})}
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+      return payload;
+    }
+
+    function setMessage(text, error = false) {
+      const target = $("message");
+      target.textContent = text;
+      target.className = error ? "error" : "";
+    }
+
+    function svgElement(name, attributes = {}, text = "") {
+      const element = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+      if (text) element.textContent = text;
+      return element;
+    }
+
+    function shorten(text, max) {
+      return text.length > max ? `${text.slice(0, max - 1)}…` : text;
+    }
+
+    function renderGraph() {
+      const svg = $("dag-svg");
+      svg.replaceChildren();
+      if (!state.dag || state.dag.status === "empty") {
+        svg.setAttribute("viewBox", "0 0 800 500");
+        svg.append(svgElement("text", {x: 400, y: 250, "text-anchor": "middle", fill: "#66717d", "font-size": 14}, "等待构建 DAG"));
+        return;
+      }
+      const nodes = state.dag.nodes;
+      const byId = new Map(nodes.map(node => [node.task_id, node]));
+      const levels = new Map();
+      nodes.forEach(node => {
+        if (!levels.has(node.level)) levels.set(node.level, []);
+        levels.get(node.level).push(node);
+      });
+      const nodeW = 230, nodeH = 104, colGap = 110, rowGap = 30, padX = 55, padY = 54;
+      const maxRows = Math.max(...Array.from(levels.values(), group => group.length));
+      const levelCount = Math.max(...nodes.map(node => node.level)) + 1;
+      const width = Math.max(760, padX * 2 + levelCount * nodeW + (levelCount - 1) * colGap);
+      const height = Math.max(520, padY * 2 + maxRows * nodeH + (maxRows - 1) * rowGap);
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.style.width = `${width * state.zoom}px`;
+      svg.style.height = `${height * state.zoom}px`;
+      const defs = svgElement("defs");
+      const marker = svgElement("marker", {id: "arrow", markerWidth: 8, markerHeight: 8, refX: 7, refY: 3, orient: "auto", markerUnits: "strokeWidth"});
+      marker.append(svgElement("path", {d: "M0,0 L0,6 L8,3 z", fill: "#8997a3"}));
+      defs.append(marker); svg.append(defs);
+      const positions = new Map();
+      Array.from(levels.entries()).sort((a, b) => a[0] - b[0]).forEach(([level, group]) => {
+        const x = padX + level * (nodeW + colGap);
+        const usedHeight = group.length * nodeH + Math.max(0, group.length - 1) * rowGap;
+        const startY = Math.max(padY, (height - usedHeight) / 2);
+        svg.append(svgElement("text", {x: x, y: 24, class: "level-label"}, `LEVEL ${level}`));
+        group.forEach((node, index) => positions.set(node.task_id, {x, y: startY + index * (nodeH + rowGap)}));
+      });
+      state.dag.edges.forEach(edge => {
+        const source = positions.get(edge.source), target = positions.get(edge.target);
+        if (!source || !target) return;
+        const x1 = source.x + nodeW, y1 = source.y + nodeH / 2, x2 = target.x, y2 = target.y + nodeH / 2;
+        const bend = Math.max(45, (x2 - x1) * .46);
+        svg.append(svgElement("path", {d: `M${x1},${y1} C${x1 + bend},${y1} ${x2 - bend},${y2} ${x2},${y2}`, class: "edge"}));
+        if (edge.type) {
+          svg.append(svgElement("text", {x: (x1 + x2) / 2, y: (y1 + y2) / 2 - 5, class: "level-label", "text-anchor": "middle"}, edge.type));
+        }
+      });
+      const changed = new Set(state.dag.change_set.changed_node_ids);
+      const invalidated = new Set(state.dag.change_set.invalidated_node_ids);
+      nodes.forEach(node => {
+        const pos = positions.get(node.task_id);
+        const classes = ["node-group"];
+        if (node.task_id === state.selected) classes.push("selected");
+        if (changed.has(node.task_id)) classes.push("changed");
+        else if (invalidated.has(node.task_id)) classes.push("invalidated");
+        else if (node.status === "completed") classes.push("completed");
+        const group = svgElement("g", {class: classes.join(" "), transform: `translate(${pos.x},${pos.y})`, tabindex: 0});
+        group.append(svgElement("rect", {width: nodeW, height: nodeH, class: "node-rect"}));
+        group.append(svgElement("text", {x: 13, y: 20, class: "node-id"}, node.task_id));
+        group.append(svgElement("text", {x: 13, y: 43, class: "node-title"}, shorten(node.title, 27)));
+        group.append(svgElement("text", {x: 13, y: 65, class: "node-meta"}, `${node.required_skill} · ${node.agent_role}`));
+        group.append(svgElement("text", {x: 13, y: 86, class: "node-meta"}, `${node.status} · v${node.version} · P${node.priority}`));
+        group.addEventListener("click", () => selectNode(node.task_id));
+        group.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") selectNode(node.task_id); });
+        svg.append(group);
+      });
+    }
+
+    function renderState() {
+      const dag = state.dag;
+      const usable = dag && dag.status !== "empty";
+      const ready = dag && dag.status === "ready";
+      $("state-dot").className = `state-dot${ready ? " ready" : ""}`;
+      $("state-text").textContent = ready ? "DAG READY" : (dag?.status === "needs_clarification" ? "NEEDS CLARIFICATION" : "未构建");
+      $("revision").textContent = `rev ${dag?.revision || 0}`;
+      $("node-count").textContent = `${usable ? dag.nodes.length : 0} 节点`;
+      $("edge-count").textContent = `${usable ? dag.edges.length : 0} 边`;
+      $("topology").textContent = `拓扑序：${usable ? dag.topological_order.join(" → ") : "-"}`;
+      const change = usable ? dag.change_set : {changed_node_ids: [], invalidated_node_ids: [], recomputed_node_ids: [], preserved_node_ids: []};
+      $("changed-count").textContent = change.changed_node_ids.length;
+      $("invalidated-count").textContent = change.invalidated_node_ids.length;
+      $("recomputed-count").textContent = change.recomputed_node_ids.length;
+      $("preserved-count").textContent = change.preserved_node_ids.length;
+      const changeList = $("change-list"); changeList.replaceChildren();
+      [["changed", "变更", change.changed_node_ids], ["invalidated", "后继", change.invalidated_node_ids], ["preserved", "保留", change.preserved_node_ids]].forEach(([className, label, ids]) => {
+        if (!ids.length) return;
+        const li = document.createElement("li"); li.className = className; li.textContent = `${label}: ${ids.join(", ")}`; changeList.append(li);
+      });
+      if (!changeList.children.length) { const li = document.createElement("li"); li.textContent = "暂无增量变更"; changeList.append(li); }
+      const agentList = $("agent-list"); agentList.replaceChildren();
+      (usable ? dag.agent_trace.slice(-5) : []).forEach(trace => { const li = document.createElement("li"); li.textContent = `${trace.agent}: ${trace.action}`; agentList.append(li); });
+      if (!agentList.children.length) { const li = document.createElement("li"); li.textContent = "暂无 Agent 记录"; agentList.append(li); }
+      if (state.selected && usable && !dag.nodes.some(node => node.task_id === state.selected)) state.selected = null;
+      renderEditor(); renderGraph();
+    }
+
+    function selectNode(taskId) { state.selected = taskId; renderState(); }
+    function renderEditor() {
+      const node = state.dag?.nodes?.find(item => item.task_id === state.selected);
+      $("node-empty").hidden = Boolean(node); $("node-editor").hidden = !node;
+      if (!node) return;
+      $("edit-id").value = node.task_id;
+      $("edit-description").value = node.description;
+      $("edit-skill").value = node.required_skill;
+      $("edit-dependencies").value = node.depends_on.join(", ");
+      $("edit-priority").value = node.priority;
+    }
+
+    function download(name, value) {
+      const blob = new Blob([JSON.stringify(value, null, 2)], {type: "application/json"});
+      const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = name; link.click(); URL.revokeObjectURL(link.href);
+    }
+
+    $("format").addEventListener("click", () => { try { input.value = JSON.stringify(JSON.parse(input.value), null, 2); setMessage("JSON 已格式化"); } catch (error) { setMessage(error.message, true); } });
+    $("build").addEventListener("click", async () => {
+      try { state.dag = await request("/api/build", {method: "POST", body: JSON.stringify(JSON.parse(input.value))}); state.selected = state.dag.nodes[0]?.task_id || null; setMessage("DAG 构建完成"); renderState(); }
+      catch (error) { setMessage(error.message, true); }
+    });
+    $("replan").addEventListener("click", async () => {
+      try { state.dag = await request("/api/specification", {method: "PUT", body: JSON.stringify(JSON.parse(input.value))}); state.selected = state.dag.nodes[0]?.task_id || null; setMessage("GoalSpec 已局部重规划"); renderState(); }
+      catch (error) { setMessage(error.message, true); }
+    });
+    $("update-node").addEventListener("click", async () => {
+      if (!state.selected) return;
+      const depends = $("edit-dependencies").value.split(",").map(value => value.trim()).filter(Boolean);
+      const patch = {description: $("edit-description").value, required_skill: $("edit-skill").value, depends_on: depends, priority: Number($("edit-priority").value)};
+      try { state.dag = await request(`/api/nodes/${encodeURIComponent(state.selected)}`, {method: "PATCH", body: JSON.stringify(patch)}); setMessage("节点及其后继已增量重算"); renderState(); }
+      catch (error) { setMessage(error.message, true); }
+    });
+    $("complete-node").addEventListener("click", async () => {
+      if (!state.selected) return;
+      try { state.dag = await request(`/api/nodes/${encodeURIComponent(state.selected)}/result`, {method: "POST", body: JSON.stringify({status: "completed", result: {accepted: true}})}); setMessage("节点已标记完成"); renderState(); }
+      catch (error) { setMessage(error.message, true); }
+    });
+    $("export").addEventListener("click", () => { if (state.dag?.status === "ready") download(`todag-rev-${state.dag.revision}.json`, state.dag); });
+    $("export-coordinator").addEventListener("click", async () => { try { download("coordinator-tasks.json", await request("/api/coordinator-plan")); } catch (error) { setMessage(error.message, true); } });
+    $("zoom").addEventListener("input", event => { state.zoom = Number(event.target.value) / 100; $("zoom-value").textContent = `${event.target.value}%`; renderGraph(); });
+    window.addEventListener("resize", renderGraph);
+
+    request("/api/dag").then(dag => { state.dag = dag; if (dag.status !== "empty") { input.value = JSON.stringify(dag.input, null, 2); state.selected = dag.nodes[0]?.task_id || null; } renderState(); }).catch(error => setMessage(error.message, true));
+  </script>
+</body>
+</html>

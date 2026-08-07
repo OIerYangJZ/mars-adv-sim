@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime / logs
+*.log
+logs/
+telemetry/
+tmp/
+cache/
+
+# Generated archives / outputs
+*.zip
+*.rar
+*.tar.gz
+outputs/
+artifacts/
+experiments/results/raw/
