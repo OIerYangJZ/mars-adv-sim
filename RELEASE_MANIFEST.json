@@ -1,0 +1,64 @@
+{
+  "release": "MOSAIC-Omega-V3-observability-console",
+  "version": "0.2.0",
+  "base_tasks_completed_in_code": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "observability_console": {
+    "status": "implemented",
+    "mode": "read-only projection",
+    "views": [
+      "overview",
+      "task_graph",
+      "topology",
+      "communication",
+      "scheduler",
+      "memory",
+      "recovery",
+      "evidence",
+      "events"
+    ],
+    "external_frontend_dependencies": 0
+  },
+  "local_verification": {
+    "pytest": "59 passed",
+    "compileall": "pass",
+    "mainchain": "6/6 succeeded",
+    "ros_repair": "6/6 succeeded; existing compileall fallback when colcon absent",
+    "console_http": "GET health=200; GET task-graph=200; POST snapshot=405 read_only_console",
+    "architecture_guard": "pass"
+  },
+  "production_external_smoke_required": [
+    "./scripts/smoke_production.sh",
+    "./scripts/smoke_mqtt.sh"
+  ],
+  "console_start": "./scripts/demo_console.sh",
+  "critical_file_sha256": {
+    "README.md": "21d69bfdfda2a5b9ec74355bfa33c591b1d92ad9d781153c216b5054f4875eea",
+    "pyproject.toml": "263bf3e08c2a65a08a0c87d32bfa9902da7868fb1eedda944f7c87a73b33c7ba",
+    "deploy/docker-compose.yml": "9d15c48ab20614b8a0a8e44e1ae73206dfd74693242cae30766d881b260179d0",
+    "Dockerfile": "439897bd5249a52d573061dc690d5da59ef30c513c4d23d397b45491fbbe5b85",
+    ".env.example": "cf97848e2de2c1fb529fc0811976a6853434ebacbc4fb8e24c4c3fe94d3578ba",
+    "src/mosaic_omega/integration/main_chain.py": "7862da7f8f9a422180d2afacb6e9f5c76b4edab8aa25fb1e42aacca8ad9e5b68",
+    "src/mosaic_omega/memory_recovery/service.py": "35d54038d8515611c90ecbda9ac09760f59e200d01e2ce73e05e7bb00f498424",
+    "src/mosaic_omega/observability/runtime.py": "9d95a17f956dd2e07ff1cf6dc56b0f07e5843425f28845ac23d9e11d03bd22a1",
+    "src/mosaic_omega/observability/projections.py": "1807b25e773be6bf97b4111270a9d436be91933f70d42c0ad241ab03e94bf83e",
+    "src/mosaic_omega/observability/logging.py": "378eb0c4f4c15898bedc15c4f373b88d65d894aa07a9a48e3d886b8405c7e923",
+    "src/mosaic_omega/observability/metrics.py": "0165fc9f95d8e27a8658ad1eda16457f906929bf03e887cdce404ffee7e3c4bd",
+    "src/mosaic_omega/console_api/source.py": "84746dc43044071976d815cc307040bae229667b83ece74ba76246f95ee4e3fe",
+    "apps/console/main.py": "5aaeb50d617dbba1146f207154d03d038d3b7366d04762edfa0039399eb72335",
+    "apps/console/backend/server.py": "c95b86720a5040beb9df75cc2a156fb5e704e23f34b84f1cde20cf4999e7f6eb",
+    "apps/console/frontend/index.html": "38cf613fd291bda5d8a0df4206119ef3a0ecf580462046c497484669c2ad5f6e",
+    "apps/console/frontend/assets/style.css": "b6e67c626aee060af9c08e5b0d3061f920e765b80cff3e63efa31c5f6aa3d0c1",
+    "apps/console/frontend/assets/app.js": "c23aa2742a951daf367a6edcbf750ec1fec240fc3184e12ec721729dccca1511",
+    "tests/unit/test_architecture_guard.py": "955bc99ab630e75cdebd5c1fe9c69a636e7824b73e52789ff07a3f62c2aeb867",
+    "tests/unit/observability/test_observability_console.py": "de2780280f7515869bdaba6147bd3f99dc96cc077b20c875de36a74f294ba084",
+    "docs/architecture/OBSERVABILITY_CONSOLE.md": "4faf87284b95a29506d4721c593b77c61a895c49ffd9413202244f859e081a03",
+    "docs/reports/OBSERVABILITY_CONSOLE_ACCEPTANCE.md": "e34f81aba0eb58741f0bca491302952be754a54c490edf0b1f5ceaf926effb64"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/todag/input.schema.json",
+  "title": "ToDAG Frozen Six-Field GoalSpec Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "main_goal",
+    "hard_constraints",
+    "soft_preferences",
+    "acceptance_conditions",
+    "budget",
+    "prohibitions"
+  ],
+  "properties": {
+    "main_goal": {
+      "oneOf": [
+        {"type": "string", "minLength": 1},
+        {
+          "type": "object",
+          "minProperties": 1,
+          "anyOf": [
+            {"required": ["goal_text"]},
+            {"required": ["text"]},
+            {"required": ["objective"]},
+            {"required": ["goal"]},
+            {"required": ["description"]},
+            {"required": ["name"]}
+          ]
+        }
+      ]
+    },
+    "hard_constraints": {"$ref": "#/$defs/richArray"},
+    "soft_preferences": {"$ref": "#/$defs/richArray"},
+    "acceptance_conditions": {"$ref": "#/$defs/richArray"},
+    "budget": {"type": "object"},
+    "prohibitions": {"$ref": "#/$defs/richArray"}
+  },
+  "$defs": {
+    "richArray": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {"type": "string", "minLength": 1},
+          {"type": "object", "minProperties": 1}
+        ]
+      }
+    }
+  }
+}

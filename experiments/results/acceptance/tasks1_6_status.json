@@ -1,0 +1,41 @@
+{
+  "implementation": {
+    "task_1_postgres_redis_compose": "implemented_external_smoke_pending",
+    "task_2_ortools_posterior": "implemented_ortools_runtime_pending_dependency",
+    "task_3_mqtt_agent": "implemented_external_smoke_pending",
+    "task_4_verifier_manifest": "local_pass",
+    "task_5_recovery_impact_graph": "local_pass",
+    "task_6_ros_repair": "local_pass_colcon_fallback"
+  },
+  "local_regression": {
+    "pytest_passed": 54,
+    "mainchain_tasks_succeeded": 6,
+    "ros_repair_tasks_succeeded": 6,
+    "ros_repair_evidence": 6,
+    "compileall": "pass",
+    "architecture_guard": "pass"
+  },
+  "local_engineering_benchmark_not_production_acceptance": {
+    "events": 100000,
+    "event_append_p95_ms": 0.08113,
+    "event_replay_s": 8.49642,
+    "scheduler_policy": "greedy",
+    "scheduler_tasks": 100,
+    "scheduler_resources": 20,
+    "scheduler_p95_ms": 176.646
+  },
+  "external_environment_missing_here": [
+    "docker",
+    "psycopg",
+    "redis-py",
+    "paho-mqtt",
+    "ortools",
+    "colcon",
+    "ros2"
+  ],
+  "production_commands": [
+    "./scripts/smoke_production.sh",
+    "./scripts/smoke_mqtt.sh"
+  ],
+  "ros_strict_command": "MOSAIC_ROS_REQUIRE_COLCON=1 PYTHONPATH=src:. python scripts/demo_ros_repair.py"
+}
