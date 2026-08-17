@@ -1,0 +1,120 @@
+x-mosaic-env: &mosaic-env
+  EXECUTION_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-mosaic}:${POSTGRES_PASSWORD:-mosaic}@postgres:5432/${POSTGRES_DB:-mosaic}
+  EXECUTION_WORKSPACE: /app/.mosaic_workspace
+  EXECUTION_SCHEMA_VERSION: "0.1"
+  EVENT_SNAPSHOT_INTERVAL: "100"
+  SCHEDULER_POLICY: ortools
+  SCHEDULER_ALLOW_FALLBACK: "false"
+  POSTERIOR_DECAY_PER_DAY: "0.02"
+  MAX_TASK_RETRIES: "1"
+  MEMORY_REDIS_URL: redis://redis:6379/0
+  MEMORY_OBJECT_STORE_DIR: /app/.mosaic_workspace/object_store
+  MEMORY_SNAPSHOT_EVERY_N_EVENTS: "100"
+  MQTT_HOST: mqtt
+  MQTT_PORT: "1883"
+  MQTT_TOPIC_PREFIX: mosaic/v3
+  ALLOWED_COMMANDS: python,python3,python.exe
+  TOOL_TIMEOUT_S: "30"
+
+x-mosaic-app: &mosaic-app
+  build:
+    context: ..
+    dockerfile: Dockerfile
+  environment:
+    <<: *mosaic-env
+  volumes:
+    - mosaic_workspace:/app/.mosaic_workspace
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-mosaic}
+      POSTGRES_USER: ${POSTGRES_USER:-mosaic}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mosaic}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - mosaic_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-mosaic} -d ${POSTGRES_DB:-mosaic}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - mosaic_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  mqtt:
+    image: eclipse-mosquitto:2
+    ports:
+      - "${MQTT_PORT:-1883}:1883"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosaic_mqtt:/mosquitto/data
+    healthcheck:
+      test: ["CMD-SHELL", "mosquitto_pub -h 127.0.0.1 -p 1883 -t health -m ok >/dev/null 2>&1"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  app-smoke:
+    <<: *mosaic-app
+    profiles: ["smoke"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: ["python", "scripts/production_smoke.py"]
+
+  mqtt-agent:
+    <<: *mosaic-app
+    profiles: ["mqtt-smoke"]
+    depends_on:
+      mqtt:
+        condition: service_healthy
+    command: ["python", "scripts/run_mqtt_agent.py", "--agent-id", "mqtt-agent-1", "--host", "mqtt", "--port", "1883"]
+
+  mqtt-smoke:
+    <<: *mosaic-app
+    profiles: ["mqtt-smoke"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mqtt:
+        condition: service_healthy
+      mqtt-agent:
+        condition: service_started
+    command: ["python", "scripts/mqtt_mainchain_smoke.py"]
+
+  console:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    profiles: ["console"]
+    environment:
+      PYTHONPATH: /app/src
+    ports:
+      - "${CONSOLE_PORT:-8080}:8080"
+    volumes:
+      - mosaic_workspace:/app/.mosaic_workspace:ro
+    command: ["python", "apps/console/main.py", "--host", "0.0.0.0", "--port", "8080", "--snapshot-dir", "/app/.mosaic_workspace/observability"]
+
+volumes:
+  mosaic_postgres:
+  mosaic_redis:
+  mosaic_mqtt:
+  mosaic_workspace:
