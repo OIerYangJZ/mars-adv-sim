@@ -1,0 +1,501 @@
+{
+  "release": "MOSAIC-Omega-V3-XH202631-Product-First-v1.9.0",
+  "generated_at": 1788601038.6765637,
+  "browser_method": "current HTML/CSS/JS rendered fully inline with DTOs captured from the actual local v1.9.0 console backend; no synthetic task metrics",
+  "source_run_id": "v190-ros-tool-001",
+  "source_execution_verdict": "CONCRETE_TOOL_EXECUTION_VERIFIED",
+  "viewports": {
+    "1280x720": {
+      "user_workspace": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-workspace",
+        "deep": "panorama",
+        "h1": "工作台",
+        "text": "MOSAIC Ω\n模型服务未配置\n让真实 API Agent 团队完成复杂任务\n\n输入目标与约束。后端会调用已配置模型 API，生成 GoalSpec，完成 DAG 调度、Agent 执行、工具调用、验证与证据沉淀。\n\n实际运行由后端任务链产生状态，界面不预置成功结果\n停止\n开始任务 →\nCURRENT WORK\n当前任务\nSUCCEEDED\nv190-ros-tool-001\n自动修复给定 ROS 软件仓库中的可复现故障\n100%\n理解目标\n规划任务\n协同执行\n验证结果\n完成交付\n当前执行\n无活动 Agent\nRun 已结束\n具体工具\nshell\n6 concrete tool event(s)\n协作通信\n0\nMessagePolicy decisions\n记忆唤醒\n0\nContextPacks\n独立验证\n6\nTASK_VERIFIED\n✓\n任务链已完成，证据 6 项\n查看详细进度 ↗\n从模板开始\n全部\n软件工程：ROS 仓库自主修复\n\n诊断故障、生成修复、构建回归并形成可验证交付。\n\n使用此模板 →\n跨域研究：端边云金融分析\n\n隐私约束下完成数据处理、风险建模、合规审核与研究交付。\n\n使用此模板 →\n运行准备\n设置\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n最近运行\n查看全部\nv190-ros-tool-001\nSUCCEEDED\nrun_complete · 9/5/2026, 9:18:19 AM",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_tasks": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-tasks",
+        "deep": "panorama",
+        "h1": "任务进度",
+        "text": "TASK EXECUTION\n任务\n\n当前 Run 的任务节点、依赖、Assignment、执行层、验证与证据全部来自 authoritative snapshot；Benchmark 与故障实验不会混入任务历史。\n\nTasks\n6\nauthoritative DAG nodes\nSucceeded\n6\nverified completion\nRunning\n0\ncurrent execution\nEvidence\n6\ncontent-addressed\n任务运行\nTASK RUNS ONLY\nv190-ros-tool-001\nSUCCEEDED\nrun_complete\n9/5/2026, 9:18:19 AM\nCURRENT RUN\n运行详情\nSUCCEEDED\nRun ID\nv190-ros-tool-001\n状态\nSUCCEEDED\n任务节点\n6/6 成功\n验证\n6/6\nEvidence\n6\n数据来源\nauthoritative snapshot + EventStore\n执行日志\nsubprocess stdout · 已隐藏本机路径\n暂无活动任务\n真实任务图与执行状态\n\n点击节点可核对依赖、Agent、Tier、Evidence 与 Verifier。\n\n6 tasks · 5 dependencies\nSUCCEEDED\nCompile the repaired repository\nros-repair-agent\n→\nSUCCEEDED\nRun tests and produce a root-cause diagno…\nros-repair-agent-backup\n→\nSUCCEEDED\nInventory repository files and ROS packag…\nros-repair-agent\n→\nSUCCEEDED\nApply the smallest patch justified by dia…\nros-repair-agent\n→\nSUCCEEDED\nGenerate evidence-carrying repair report\nros-repair-agent\n→\nSUCCEEDED\nRun the regression test suite\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nAGENT / TIER\nros-repair-agent · EDGE\nCONCRETE TOOL\nshell\nVERIFIER\nPASS\nEVIDENCE\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_deliverables": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-deliverables",
+        "deep": "panorama",
+        "h1": "结果与文件",
+        "text": "DELIVERABLES\n结果与证据\n\n仅展示逻辑文件名与证据类别；系统不会把电脑上的绝对目录暴露到产品界面。\n\n刷新文件\nArtifacts\n12\napproved server roots\nResults\n0\nrun result files\nEvidence\n6\ncontent-addressed evidence\nDeliverables\n6\ntask outputs\n◇\n最终报告 · 执行证据\n最终报告.txt · Run v190-ros-tool-001 · SHA256 7fa8db8dd2e4…\n0.1 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n▱\n修复报告\nrepair_report.md · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n◇\n测试结果 · 执行证据\n测试结果.txt · Run v190-ros-tool-001 · SHA256 505475057b5f…\n0.1 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n▱\n回归测试结果\ntest.json · Run v190-ros-tool-001 · ros_repair\n0.2 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n◇\n构建结果 · 执行证据\n构建结果.txt · Run v190-ros-tool-001 · SHA256 cdc727aa1b5e…\n0.1 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n▱\n构建结果\nbuild.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n◇\n修复补丁 · 执行证据\n修复补丁.txt · Run v190-ros-tool-001 · SHA256 a470daedb24f…\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n▱\n修复补丁\npatch.json · Run v190-ros-tool-001 · ros_repair\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n◇\n故障诊断 · 执行证据\n故障诊断.txt · Run v190-ros-tool-001 · SHA256 b5400241b06f…\n0.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n▱\n故障诊断\ndiagnosis.json · Run v190-ros-tool-001 · ros_repair\n1.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n◇\n仓库清单 · 执行证据\n仓库清单.txt · Run v190-ros-tool-001 · SHA256 07a84e060294…\n0.1 KB\n9/5/2026, 9:18:13 AM\n预览\n下载\n▱\n仓库清单\ninventory.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:13 AM\n预览\n下载",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_settings": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-settings",
+        "deep": "panorama",
+        "h1": "设置",
+        "text": "SETTINGS\n模型服务与 API\n\nAPI Key 由后端安全存储，浏览器只获得“是否已配置”，不会读取原始密钥。\n\n模型服务\nProvider\nDeepSeek\nOpenAI-compatible API\nOllama / local OpenAI-compatible\nAPI Key\n当前 Provider 未配置\n模型\n用于真实任务\n服务地址\n仅在设置页显示\n当前 Provider 独立密钥存储：permission_limited_file；切换 Provider 不复用其他服务的 Key。\n清除当前 Key\n测试连接\n保存设置\n远程执行节点\n\n为 DEVICE / EDGE / CLOUD 注册真实 MQTT Agent。地址仅在设置页配置，不进入评委观测 DTO。\n\nREMOTE RPC\n尚未注册远程执行节点\n单机运行无需配置；跨主机部署建议 TLS + 认证。\nEndpoint ID\n节点名称\n执行层级\nDEVICE\nEDGE\nCLOUD\n远程 Agent ID\nMQTT Broker\n端口\nMQTT Username\nMQTT Password\nTLS\n关闭（仅隔离内网）\n启用 TLS\n节点状态\n启用\n停用\nTopic Prefix\n“测试远程节点”会真正发送 MQTT PLAN_REQUEST，并且只有收到目标 Agent 的 PLAN_RESPONSE 才标记 VERIFIED。\n新建 / 清空\n测试远程节点\n保存节点\n系统运行准备\n实时检查\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n高级智能体配置\n\n普通用户无需修改。需要按角色、Skills、层级和模型覆盖配置 Agent 时再进入。\n\nADVANCED\n打开 Agent Studio\n◈\n隐私边界\n\n密钥不进入前端状态、不写 localStorage；观测 API 会脱敏本机文件路径与 loopback 地址。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_panorama": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "panorama",
+        "h1": "技术透视",
+        "text": "RUN PANORAMA\n从用户目标到可核验证据\n点击任意模块继续下钻\n01\nGoalSpec\n目标与约束\n→\n02\nDynamic DAG\n6 tasks\n→\n03\nScheduler\n6 assignments\n→\n04\nAgents / Topology\nv3 · 2 edges\n→\n05\nLow-Entropy\n0 decisions\n→\n06\nMemory\n0 ContextPacks\n→\n07\nToolRuntime\n执行与产物\n→\n08\nVerifier\n6 verified\n→\n09\nRecovery\n0 events\n→\n10\nEvidence\n6 items\n当前 Run 真实性\nFail-closed\nVerdict\nDETERMINISTIC_TOOL_EXECUTOR\nCompetition strict real agent\nfalse\nAssigned agents\n2\nExecution semantics\nCONCRETE_TOOL_EXECUTION_VERIFIED\nConcrete tool calls\n6\nAPI request count\n0\nMeasured API tokens\n数据不足，不估算冒充\n性能与资源\nMeasured / Estimated 分离\nRun status\nSUCCEEDED\nTask success rate\n100.0%\nE2E latency\n7,191.3 ms\nScheduler average cost\n1.4846\nMemory token reduction\n未估算\n感知-规划-执行-反馈闭环\n当前 Run 已验证\n\n6 tasks 全部 SUCCEEDED；6 TASK_VERIFIED；6 evidence；6 次成功的非 task ToolRuntime 执行。\n\n超长程上下文连续性与记忆保持\n系统已实现\n\nMemoryService/ContextPack 已实现；当前 Run 尚无 ContextPack 运行证据。\n\n动态异构拓扑与稀疏路由\n有运行证据\n\nTopology v3，2 条 snapshot 边；Task DAG 也只画真实 edges。\n\n低熵通信 / 冗余抑制\n系统已实现\n\nMessagePolicy 已实现；当前 Run 尚无通信策略记录。\n\n端-边-云调度与模型切分\n需补实跑\n\n当前实际 assignment tier：edge。可执行 split reference 已实现，但必须跑 benchmark 才算证据；真实 LLM layer split 仍不宣称完成。\n\n动态异常 / 需求变更 / 节点失效\n可真实注入\n\nLiveFaultMailbox/RecoveryEngine 已实现；需执行并保留证据。\n\n2 个及以上跨领域长程任务\n需完成两场景\n\n已提供两个场景，但仅代码存在不算运行证据。\n\n多模型 / Agent 可扩展接口\n接口已实现\n\n3 类 Provider；Agent Studio 可配置角色、Skill、权限、Tier、模型和最大负载。接口实现不冒充各 Provider 金标实测。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_dag": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "dag",
+        "h1": "技术透视",
+        "text": "DYNAMIC TASK GRAPH\nDAG 与 Task Inspector\n6 tasks · 5 authoritative edges\nCompile the repaired rep…\nSUCCEEDED\nros-repair-agent\nRun tests and produce a …\nSUCCEEDED\nros-repair-agent-backup\nInventory repository fil…\nSUCCEEDED\nros-repair-agent\nApply the smallest patch…\nSUCCEEDED\nros-repair-agent\nGenerate evidence-carryi…\nSUCCEEDED\nros-repair-agent\nRun the regression test …\nSUCCEEDED\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nSCHEDULER ASSIGNMENT\nros-repair-agent · EDGE\nMODEL\nlocal-model\nTOOL CALL\nshell\nVERIFICATION\nPASS\nEVIDENCE IDS\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_scheduler": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "scheduler",
+        "h1": "技术透视",
+        "text": "SCHEDULER DECISION\n优化求解 / 代价模型 / 真实 Assignment\n6 assignments · NON_ORTOOLS_RUN\n优化目标与约束\nmin Σt,d xtdCtd\n\nC = Cfixed + Clatency + Ctoken + Cenergy + Cfailure + Cmigration + Cload + Cplacement\n\n每个 Task 仅分配一次\n设备容量约束\n技能/权限可行性\n隐私与位置约束\n真实 Assignment\nAssignments\n6\nSolver\nNON_ORTOOLS_RUN\nAverage cost\n1.4846\nActual tiers\nedge\nTASK\tSELECTED AGENT\tACTUAL TIER\tRECOMMENDED\tTOTAL COST\nbuild\tros-repair-agent\tEDGE\tEDGE\t1.7500\ndiagnose\tros-repair-agent-backup\tEDGE\tEDGE\t2.0250\ninventory\tros-repair-agent\tEDGE\tEDGE\t0.2250\npatch\tros-repair-agent\tEDGE\tEDGE\t2.1250\nreport\tros-repair-agent\tEDGE\tEDGE\t1.2946\ntest\tros-repair-agent\tEDGE\tEDGE\t1.4881\nCost Breakdown · 实际被选 Assignment\nTASK\tFIXED + LATENCY\tTOKEN + ENERGY\tFAILURE + LOAD + MIGRATION + PLACEMENT\tTOTAL\nbuild\t0.000 + 0.000\t0.000 + 0.000\t1.750 + 0.000 + 0.000 + 0.000\t1.7500\ndiagnose\t0.000 + 0.000\t0.000 + 0.000\t2.025 + 0.000 + 0.000 + 0.000\t2.0250\ninventory\t0.000 + 0.000\t0.000 + 0.000\t0.225 + 0.000 + 0.000 + 0.000\t0.2250\npatch\t0.000 + 0.000\t0.000 + 0.000\t2.125 + 0.000 + 0.000 + 0.000\t2.1250\nreport\t0.000 + 0.000\t0.000 + 0.000\t1.295 + 0.000 + 0.000 + 0.000\t1.2946\ntest\t0.000 + 0.000\t0.000 + 0.000\t1.488 + 0.000 + 0.000 + 0.000\t1.4881\nAgent Reliability · Beta Posterior\nE[p] = α / (α + β)    ·    γ = e−λΔt\n\n可靠性不是固定“成功率”文案；若后端存在 posterior/measurement metadata，则以能力记录为准。当前 capability 数：2。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_collaboration": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "collaboration",
+        "h1": "技术透视",
+        "text": "MULTI-AGENT COLLABORATION\n谁与谁正在协作\nTopology v3 · 2 directed edges · Algebraic Connectivity λ₂=2.000\nros-repair-agent\nAGENT\nros-repair-agen…\nAGENT\nros-repair-agent → ros-repair-agent-backup\n\nEdge score: Sᵢⱼ = 0.40D + 0.30I + 0.20R + 0.10L\n\nEDGE SCORE\n0.8000\nREASON\ntask_dependency\nTASK IDS\ndiagnose, inventory\nMESSAGES / DECISIONS\n0\nPOLICY ACTIONS\n无记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_communication": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "communication",
+        "h1": "技术透视",
+        "text": "LOW-ENTROPY COMMUNICATION\nSEND / MERGE / DROP / DEFER 与压缩链\n0 policy decisions\n低熵通信决策链\nKnowledgeDigest\n→\nReceiver-aware Δ\n→\nContent Hash Dedup\n→\nDecision Impact\n→\nTTL / Token Budget\n→\nSEND / MERGE / DEFER / DROP\n\n只展示后端真实 MessagePolicy 决策；没有受控 baseline 时不凭空生成“节省 xx%”。\n\n当前 Run 通信策略分布\nSEND\n0\nMERGE\n0\nDEFER\n0\nDROP\n0\n当前 Run 最近通信决策\nMESSAGE\tFROM\tTO\tPOLICY\tREDUCTION / SIZE\n当前 Run 没有对应运行记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_memory": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "memory",
+        "h1": "技术透视",
+        "text": "HIERARCHICAL MEMORY\nWorking / Episodic / Semantic / Procedural\n90 records · 0 ContextPacks\nWORKING\nWorking Memory\n\n当前 Goal、DAG 与任务上下文\n\nEPISODIC\nEpisodic Memory\n\nRun、失败与恢复经历\n\nSEMANTIC\nSemantic Memory\n\n经验证事实、约束与知识\n\nPROCEDURAL\nProcedural Memory\n\n工具过程、恢复模式与操作经验\n\nMemory Ranking\nScore = 0.26Rtask + 0.16Revidence + 0.18I + 0.10C + 0.10Rtime + 0.06N + 0.14S + Bverified\nRtime = e−age/86400\n\n权重用于说明代码中的选择逻辑；最终选择数量与 token estimate 仍以当前 Snapshot 为准。\n\n当前 Run ContextPack 选择结果\n\nEstimated Context Token 与真实 Provider API usage 严格分开。\n\nMemory records\n90\nContextPacks\n0\nFull history\n0 EST.\nSelected context\n0 EST.\nEstimated reduction\n—\nReal API tokens\nINSUFFICIENT DATA",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_verifier": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "verifier",
+        "h1": "技术透视",
+        "text": "INDEPENDENT VERIFICATION\nExecution → Evidence → Predicate → Verdict\n6 TASK_VERIFIED · 6 evidence\n01\nExecution\n6 TOOL_EXECUTED events\n02\nEvidence\n6 content-addressed items\n03\nPredicates\ndeterministic first; semantic only when required\n04\nIndependent Verdict\n6 PASS / 0 FAIL\nPredicate → Evidence SHA256 → Verdict\n\n每行直接来自 TASK_VERIFIED + EvidenceStore；不接受 Agent 自报完成作为最终验收。\n\nTASK\tVERDICT\tPREDICATE CHECKS\tEVIDENCE SHA256\tVERIFIER\nreport\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_1e9db08f66ce41b697252ff43e41a1c2\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/repair_report.md\n✓ file_contains:ros_repo/artifacts/repair_report.md:Final pytest: PASS\t7fa8db8dd2e491fa8…\tdeterministic-verifier\ntest\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_acd6e15c58584f0b9eb98d7bac59824c\n✓ exit_code==0\t505475057b5f63554…\tdeterministic-verifier\nbuild\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_beaa8becffff47008b3498f19dfc44c3\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/build.json\tcdc727aa1b5edeb04…\tdeterministic-verifier\npatch\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_616d4f60dea4431da027167acf060b12\n✓ exit_code==0\n✓ file_contains:ros_repo/src/demo_ros_pkg/demo_ros_pkg/controller.py:return left + right\n✓ file_exists:ros_repo/artifacts/patch.json\ta470daedb24f1e230…\tdeterministic-verifier\ndiagnose\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_ccc6f859c2ba4c2eb26eabb3a472796b\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/diagnosis.json\tb5400241b06f0bb40…\tdeterministic-verifier\ninventory\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_38b5efa4330840dd9b06bc4cc358054d\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/inventory.json\t07a84e06029463295…\tdeterministic-verifier",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_recovery": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "recovery",
+        "h1": "技术透视",
+        "text": "RECOVERY CHAIN\n异常注入、失效检测、重分配与恢复\n8 adaptation / recovery events\nAdaptation / Recovery timeline\n\n动态拓扑适应与 RecoveryEngine 恢复分开标记，避免把“重新路由”冒充“重试恢复”。\n\n9/5/2026, 9:18:12 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments\n9/5/2026, 9:18:12 AM\nTASK_ASSIGNED\ninventory · authoritative event\n9/5/2026, 9:18:13 AM\nTASK_ASSIGNED\ndiagnose · authoritative event\n9/5/2026, 9:18:14 AM\nTASK_ASSIGNED\npatch · authoritative event\n9/5/2026, 9:18:15 AM\nTASK_ASSIGNED\nbuild · authoritative event\n9/5/2026, 9:18:16 AM\nTASK_ASSIGNED\ntest · authoritative event\n9/5/2026, 9:18:18 AM\nTASK_ASSIGNED\nreport · authoritative event\n9/5/2026, 9:18:19 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lab": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "lab",
+        "h1": "技术透视",
+        "text": "VALIDATION LAB\n受控变量实验与 Baseline\n打开完整实验页\n实验展示原则\n\n目的 → 控制变量 → Baseline → MOSAIC → 指标 → 原始 JSON。优先展示本次成功 Experiment Job；若尚未运行，则展示 v1.9.0 包内重新生成的受控 benchmark，并明确区分。\n\nExperiment jobs\n0\nBenchmark succeeded\n0\nPackaged benchmarks\n0\nTruth boundary\nMEASURED / ESTIMATED separated\nTopology replay\n待运行\n\n无结果 · same-message-set replay\n\nMemory ablation\n待运行\n\n无结果 · token=estimate\n\nScheduler ablation\n待运行\n\n无结果 · same tasks / registry / weights / capacities\n\nLong horizon\n待运行\n\n无结果 · authoritative EventStore\n\nSplit inference\n待运行\n\n无结果 · reference MLP, not LLM layer split",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lineage": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "active": "view-judge",
+        "deep": "lineage",
+        "h1": "技术透视",
+        "text": "TRACEABILITY\n界面数字如何追溯到事件与证据\n打开完整血缘页\nTraceability contract\n\n每个状态、数字与图形必须追溯到 API 字段、EventStore 事件或明确派生公式。\n\nLineage fields\n76\nState contracts\n11\nEvents\n87\nEvidence\n6",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      }
+    },
+    "1366x768": {
+      "user_workspace": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-workspace",
+        "deep": "panorama",
+        "h1": "工作台",
+        "text": "MOSAIC Ω\n模型服务未配置\n让真实 API Agent 团队完成复杂任务\n\n输入目标与约束。后端会调用已配置模型 API，生成 GoalSpec，完成 DAG 调度、Agent 执行、工具调用、验证与证据沉淀。\n\n实际运行由后端任务链产生状态，界面不预置成功结果\n停止\n开始任务 →\nCURRENT WORK\n当前任务\nSUCCEEDED\nv190-ros-tool-001\n自动修复给定 ROS 软件仓库中的可复现故障\n100%\n理解目标\n规划任务\n协同执行\n验证结果\n完成交付\n当前执行\n无活动 Agent\nRun 已结束\n具体工具\nshell\n6 concrete tool event(s)\n协作通信\n0\nMessagePolicy decisions\n记忆唤醒\n0\nContextPacks\n独立验证\n6\nTASK_VERIFIED\n✓\n任务链已完成，证据 6 项\n查看详细进度 ↗\n从模板开始\n全部\n软件工程：ROS 仓库自主修复\n\n诊断故障、生成修复、构建回归并形成可验证交付。\n\n使用此模板 →\n跨域研究：端边云金融分析\n\n隐私约束下完成数据处理、风险建模、合规审核与研究交付。\n\n使用此模板 →\n运行准备\n设置\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n最近运行\n查看全部\nv190-ros-tool-001\nSUCCEEDED\nrun_complete · 9/5/2026, 9:18:19 AM",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_tasks": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-tasks",
+        "deep": "panorama",
+        "h1": "任务进度",
+        "text": "TASK EXECUTION\n任务\n\n当前 Run 的任务节点、依赖、Assignment、执行层、验证与证据全部来自 authoritative snapshot；Benchmark 与故障实验不会混入任务历史。\n\nTasks\n6\nauthoritative DAG nodes\nSucceeded\n6\nverified completion\nRunning\n0\ncurrent execution\nEvidence\n6\ncontent-addressed\n任务运行\nTASK RUNS ONLY\nv190-ros-tool-001\nSUCCEEDED\nrun_complete\n9/5/2026, 9:18:19 AM\nCURRENT RUN\n运行详情\nSUCCEEDED\nRun ID\nv190-ros-tool-001\n状态\nSUCCEEDED\n任务节点\n6/6 成功\n验证\n6/6\nEvidence\n6\n数据来源\nauthoritative snapshot + EventStore\n执行日志\nsubprocess stdout · 已隐藏本机路径\n暂无活动任务\n真实任务图与执行状态\n\n点击节点可核对依赖、Agent、Tier、Evidence 与 Verifier。\n\n6 tasks · 5 dependencies\nSUCCEEDED\nCompile the repaired repository\nros-repair-agent\n→\nSUCCEEDED\nRun tests and produce a root-cause diagno…\nros-repair-agent-backup\n→\nSUCCEEDED\nInventory repository files and ROS packag…\nros-repair-agent\n→\nSUCCEEDED\nApply the smallest patch justified by dia…\nros-repair-agent\n→\nSUCCEEDED\nGenerate evidence-carrying repair report\nros-repair-agent\n→\nSUCCEEDED\nRun the regression test suite\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nAGENT / TIER\nros-repair-agent · EDGE\nCONCRETE TOOL\nshell\nVERIFIER\nPASS\nEVIDENCE\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_deliverables": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-deliverables",
+        "deep": "panorama",
+        "h1": "结果与文件",
+        "text": "DELIVERABLES\n结果与证据\n\n仅展示逻辑文件名与证据类别；系统不会把电脑上的绝对目录暴露到产品界面。\n\n刷新文件\nArtifacts\n12\napproved server roots\nResults\n0\nrun result files\nEvidence\n6\ncontent-addressed evidence\nDeliverables\n6\ntask outputs\n◇\n最终报告 · 执行证据\n最终报告.txt · Run v190-ros-tool-001 · SHA256 7fa8db8dd2e4…\n0.1 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n▱\n修复报告\nrepair_report.md · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n◇\n测试结果 · 执行证据\n测试结果.txt · Run v190-ros-tool-001 · SHA256 505475057b5f…\n0.1 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n▱\n回归测试结果\ntest.json · Run v190-ros-tool-001 · ros_repair\n0.2 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n◇\n构建结果 · 执行证据\n构建结果.txt · Run v190-ros-tool-001 · SHA256 cdc727aa1b5e…\n0.1 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n▱\n构建结果\nbuild.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n◇\n修复补丁 · 执行证据\n修复补丁.txt · Run v190-ros-tool-001 · SHA256 a470daedb24f…\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n▱\n修复补丁\npatch.json · Run v190-ros-tool-001 · ros_repair\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n◇\n故障诊断 · 执行证据\n故障诊断.txt · Run v190-ros-tool-001 · SHA256 b5400241b06f…\n0.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n▱\n故障诊断\ndiagnosis.json · Run v190-ros-tool-001 · ros_repair\n1.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n◇\n仓库清单 · 执行证据\n仓库清单.txt · Run v190-ros-tool-001 · SHA256 07a84e060294…\n0.1 KB\n9/5/2026, 9:18:13 AM\n预览\n下载\n▱\n仓库清单\ninventory.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:13 AM\n预览\n下载",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_settings": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-settings",
+        "deep": "panorama",
+        "h1": "设置",
+        "text": "SETTINGS\n模型服务与 API\n\nAPI Key 由后端安全存储，浏览器只获得“是否已配置”，不会读取原始密钥。\n\n模型服务\nProvider\nDeepSeek\nOpenAI-compatible API\nOllama / local OpenAI-compatible\nAPI Key\n当前 Provider 未配置\n模型\n用于真实任务\n服务地址\n仅在设置页显示\n当前 Provider 独立密钥存储：permission_limited_file；切换 Provider 不复用其他服务的 Key。\n清除当前 Key\n测试连接\n保存设置\n远程执行节点\n\n为 DEVICE / EDGE / CLOUD 注册真实 MQTT Agent。地址仅在设置页配置，不进入评委观测 DTO。\n\nREMOTE RPC\n尚未注册远程执行节点\n单机运行无需配置；跨主机部署建议 TLS + 认证。\nEndpoint ID\n节点名称\n执行层级\nDEVICE\nEDGE\nCLOUD\n远程 Agent ID\nMQTT Broker\n端口\nMQTT Username\nMQTT Password\nTLS\n关闭（仅隔离内网）\n启用 TLS\n节点状态\n启用\n停用\nTopic Prefix\n“测试远程节点”会真正发送 MQTT PLAN_REQUEST，并且只有收到目标 Agent 的 PLAN_RESPONSE 才标记 VERIFIED。\n新建 / 清空\n测试远程节点\n保存节点\n系统运行准备\n实时检查\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n高级智能体配置\n\n普通用户无需修改。需要按角色、Skills、层级和模型覆盖配置 Agent 时再进入。\n\nADVANCED\n打开 Agent Studio\n◈\n隐私边界\n\n密钥不进入前端状态、不写 localStorage；观测 API 会脱敏本机文件路径与 loopback 地址。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_panorama": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "panorama",
+        "h1": "技术透视",
+        "text": "RUN PANORAMA\n从用户目标到可核验证据\n点击任意模块继续下钻\n01\nGoalSpec\n目标与约束\n→\n02\nDynamic DAG\n6 tasks\n→\n03\nScheduler\n6 assignments\n→\n04\nAgents / Topology\nv3 · 2 edges\n→\n05\nLow-Entropy\n0 decisions\n→\n06\nMemory\n0 ContextPacks\n→\n07\nToolRuntime\n执行与产物\n→\n08\nVerifier\n6 verified\n→\n09\nRecovery\n0 events\n→\n10\nEvidence\n6 items\n当前 Run 真实性\nFail-closed\nVerdict\nDETERMINISTIC_TOOL_EXECUTOR\nCompetition strict real agent\nfalse\nAssigned agents\n2\nExecution semantics\nCONCRETE_TOOL_EXECUTION_VERIFIED\nConcrete tool calls\n6\nAPI request count\n0\nMeasured API tokens\n数据不足，不估算冒充\n性能与资源\nMeasured / Estimated 分离\nRun status\nSUCCEEDED\nTask success rate\n100.0%\nE2E latency\n7,191.3 ms\nScheduler average cost\n1.4846\nMemory token reduction\n未估算\n感知-规划-执行-反馈闭环\n当前 Run 已验证\n\n6 tasks 全部 SUCCEEDED；6 TASK_VERIFIED；6 evidence；6 次成功的非 task ToolRuntime 执行。\n\n超长程上下文连续性与记忆保持\n系统已实现\n\nMemoryService/ContextPack 已实现；当前 Run 尚无 ContextPack 运行证据。\n\n动态异构拓扑与稀疏路由\n有运行证据\n\nTopology v3，2 条 snapshot 边；Task DAG 也只画真实 edges。\n\n低熵通信 / 冗余抑制\n系统已实现\n\nMessagePolicy 已实现；当前 Run 尚无通信策略记录。\n\n端-边-云调度与模型切分\n需补实跑\n\n当前实际 assignment tier：edge。可执行 split reference 已实现，但必须跑 benchmark 才算证据；真实 LLM layer split 仍不宣称完成。\n\n动态异常 / 需求变更 / 节点失效\n可真实注入\n\nLiveFaultMailbox/RecoveryEngine 已实现；需执行并保留证据。\n\n2 个及以上跨领域长程任务\n需完成两场景\n\n已提供两个场景，但仅代码存在不算运行证据。\n\n多模型 / Agent 可扩展接口\n接口已实现\n\n3 类 Provider；Agent Studio 可配置角色、Skill、权限、Tier、模型和最大负载。接口实现不冒充各 Provider 金标实测。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_dag": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "dag",
+        "h1": "技术透视",
+        "text": "DYNAMIC TASK GRAPH\nDAG 与 Task Inspector\n6 tasks · 5 authoritative edges\nCompile the repaired rep…\nSUCCEEDED\nros-repair-agent\nRun tests and produce a …\nSUCCEEDED\nros-repair-agent-backup\nInventory repository fil…\nSUCCEEDED\nros-repair-agent\nApply the smallest patch…\nSUCCEEDED\nros-repair-agent\nGenerate evidence-carryi…\nSUCCEEDED\nros-repair-agent\nRun the regression test …\nSUCCEEDED\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nSCHEDULER ASSIGNMENT\nros-repair-agent · EDGE\nMODEL\nlocal-model\nTOOL CALL\nshell\nVERIFICATION\nPASS\nEVIDENCE IDS\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_scheduler": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "scheduler",
+        "h1": "技术透视",
+        "text": "SCHEDULER DECISION\n优化求解 / 代价模型 / 真实 Assignment\n6 assignments · NON_ORTOOLS_RUN\n优化目标与约束\nmin Σt,d xtdCtd\n\nC = Cfixed + Clatency + Ctoken + Cenergy + Cfailure + Cmigration + Cload + Cplacement\n\n每个 Task 仅分配一次\n设备容量约束\n技能/权限可行性\n隐私与位置约束\n真实 Assignment\nAssignments\n6\nSolver\nNON_ORTOOLS_RUN\nAverage cost\n1.4846\nActual tiers\nedge\nTASK\tSELECTED AGENT\tACTUAL TIER\tRECOMMENDED\tTOTAL COST\nbuild\tros-repair-agent\tEDGE\tEDGE\t1.7500\ndiagnose\tros-repair-agent-backup\tEDGE\tEDGE\t2.0250\ninventory\tros-repair-agent\tEDGE\tEDGE\t0.2250\npatch\tros-repair-agent\tEDGE\tEDGE\t2.1250\nreport\tros-repair-agent\tEDGE\tEDGE\t1.2946\ntest\tros-repair-agent\tEDGE\tEDGE\t1.4881\nCost Breakdown · 实际被选 Assignment\nTASK\tFIXED + LATENCY\tTOKEN + ENERGY\tFAILURE + LOAD + MIGRATION + PLACEMENT\tTOTAL\nbuild\t0.000 + 0.000\t0.000 + 0.000\t1.750 + 0.000 + 0.000 + 0.000\t1.7500\ndiagnose\t0.000 + 0.000\t0.000 + 0.000\t2.025 + 0.000 + 0.000 + 0.000\t2.0250\ninventory\t0.000 + 0.000\t0.000 + 0.000\t0.225 + 0.000 + 0.000 + 0.000\t0.2250\npatch\t0.000 + 0.000\t0.000 + 0.000\t2.125 + 0.000 + 0.000 + 0.000\t2.1250\nreport\t0.000 + 0.000\t0.000 + 0.000\t1.295 + 0.000 + 0.000 + 0.000\t1.2946\ntest\t0.000 + 0.000\t0.000 + 0.000\t1.488 + 0.000 + 0.000 + 0.000\t1.4881\nAgent Reliability · Beta Posterior\nE[p] = α / (α + β)    ·    γ = e−λΔt\n\n可靠性不是固定“成功率”文案；若后端存在 posterior/measurement metadata，则以能力记录为准。当前 capability 数：2。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_collaboration": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "collaboration",
+        "h1": "技术透视",
+        "text": "MULTI-AGENT COLLABORATION\n谁与谁正在协作\nTopology v3 · 2 directed edges · Algebraic Connectivity λ₂=2.000\nros-repair-agent\nAGENT\nros-repair-agen…\nAGENT\nros-repair-agent → ros-repair-agent-backup\n\nEdge score: Sᵢⱼ = 0.40D + 0.30I + 0.20R + 0.10L\n\nEDGE SCORE\n0.8000\nREASON\ntask_dependency\nTASK IDS\ndiagnose, inventory\nMESSAGES / DECISIONS\n0\nPOLICY ACTIONS\n无记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_communication": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "communication",
+        "h1": "技术透视",
+        "text": "LOW-ENTROPY COMMUNICATION\nSEND / MERGE / DROP / DEFER 与压缩链\n0 policy decisions\n低熵通信决策链\nKnowledgeDigest\n→\nReceiver-aware Δ\n→\nContent Hash Dedup\n→\nDecision Impact\n→\nTTL / Token Budget\n→\nSEND / MERGE / DEFER / DROP\n\n只展示后端真实 MessagePolicy 决策；没有受控 baseline 时不凭空生成“节省 xx%”。\n\n当前 Run 通信策略分布\nSEND\n0\nMERGE\n0\nDEFER\n0\nDROP\n0\n当前 Run 最近通信决策\nMESSAGE\tFROM\tTO\tPOLICY\tREDUCTION / SIZE\n当前 Run 没有对应运行记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_memory": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "memory",
+        "h1": "技术透视",
+        "text": "HIERARCHICAL MEMORY\nWorking / Episodic / Semantic / Procedural\n90 records · 0 ContextPacks\nWORKING\nWorking Memory\n\n当前 Goal、DAG 与任务上下文\n\nEPISODIC\nEpisodic Memory\n\nRun、失败与恢复经历\n\nSEMANTIC\nSemantic Memory\n\n经验证事实、约束与知识\n\nPROCEDURAL\nProcedural Memory\n\n工具过程、恢复模式与操作经验\n\nMemory Ranking\nScore = 0.26Rtask + 0.16Revidence + 0.18I + 0.10C + 0.10Rtime + 0.06N + 0.14S + Bverified\nRtime = e−age/86400\n\n权重用于说明代码中的选择逻辑；最终选择数量与 token estimate 仍以当前 Snapshot 为准。\n\n当前 Run ContextPack 选择结果\n\nEstimated Context Token 与真实 Provider API usage 严格分开。\n\nMemory records\n90\nContextPacks\n0\nFull history\n0 EST.\nSelected context\n0 EST.\nEstimated reduction\n—\nReal API tokens\nINSUFFICIENT DATA",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_verifier": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "verifier",
+        "h1": "技术透视",
+        "text": "INDEPENDENT VERIFICATION\nExecution → Evidence → Predicate → Verdict\n6 TASK_VERIFIED · 6 evidence\n01\nExecution\n6 TOOL_EXECUTED events\n02\nEvidence\n6 content-addressed items\n03\nPredicates\ndeterministic first; semantic only when required\n04\nIndependent Verdict\n6 PASS / 0 FAIL\nPredicate → Evidence SHA256 → Verdict\n\n每行直接来自 TASK_VERIFIED + EvidenceStore；不接受 Agent 自报完成作为最终验收。\n\nTASK\tVERDICT\tPREDICATE CHECKS\tEVIDENCE SHA256\tVERIFIER\nreport\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_1e9db08f66ce41b697252ff43e41a1c2\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/repair_report.md\n✓ file_contains:ros_repo/artifacts/repair_report.md:Final pytest: PASS\t7fa8db8dd2e491fa8…\tdeterministic-verifier\ntest\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_acd6e15c58584f0b9eb98d7bac59824c\n✓ exit_code==0\t505475057b5f63554…\tdeterministic-verifier\nbuild\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_beaa8becffff47008b3498f19dfc44c3\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/build.json\tcdc727aa1b5edeb04…\tdeterministic-verifier\npatch\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_616d4f60dea4431da027167acf060b12\n✓ exit_code==0\n✓ file_contains:ros_repo/src/demo_ros_pkg/demo_ros_pkg/controller.py:return left + right\n✓ file_exists:ros_repo/artifacts/patch.json\ta470daedb24f1e230…\tdeterministic-verifier\ndiagnose\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_ccc6f859c2ba4c2eb26eabb3a472796b\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/diagnosis.json\tb5400241b06f0bb40…\tdeterministic-verifier\ninventory\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_38b5efa4330840dd9b06bc4cc358054d\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/inventory.json\t07a84e06029463295…\tdeterministic-verifier",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_recovery": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "recovery",
+        "h1": "技术透视",
+        "text": "RECOVERY CHAIN\n异常注入、失效检测、重分配与恢复\n8 adaptation / recovery events\nAdaptation / Recovery timeline\n\n动态拓扑适应与 RecoveryEngine 恢复分开标记，避免把“重新路由”冒充“重试恢复”。\n\n9/5/2026, 9:18:12 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments\n9/5/2026, 9:18:12 AM\nTASK_ASSIGNED\ninventory · authoritative event\n9/5/2026, 9:18:13 AM\nTASK_ASSIGNED\ndiagnose · authoritative event\n9/5/2026, 9:18:14 AM\nTASK_ASSIGNED\npatch · authoritative event\n9/5/2026, 9:18:15 AM\nTASK_ASSIGNED\nbuild · authoritative event\n9/5/2026, 9:18:16 AM\nTASK_ASSIGNED\ntest · authoritative event\n9/5/2026, 9:18:18 AM\nTASK_ASSIGNED\nreport · authoritative event\n9/5/2026, 9:18:19 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lab": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "lab",
+        "h1": "技术透视",
+        "text": "VALIDATION LAB\n受控变量实验与 Baseline\n打开完整实验页\n实验展示原则\n\n目的 → 控制变量 → Baseline → MOSAIC → 指标 → 原始 JSON。优先展示本次成功 Experiment Job；若尚未运行，则展示 v1.9.0 包内重新生成的受控 benchmark，并明确区分。\n\nExperiment jobs\n0\nBenchmark succeeded\n0\nPackaged benchmarks\n0\nTruth boundary\nMEASURED / ESTIMATED separated\nTopology replay\n待运行\n\n无结果 · same-message-set replay\n\nMemory ablation\n待运行\n\n无结果 · token=estimate\n\nScheduler ablation\n待运行\n\n无结果 · same tasks / registry / weights / capacities\n\nLong horizon\n待运行\n\n无结果 · authoritative EventStore\n\nSplit inference\n待运行\n\n无结果 · reference MLP, not LLM layer split",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lineage": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "bodyScrollWidth": 1366,
+        "active": "view-judge",
+        "deep": "lineage",
+        "h1": "技术透视",
+        "text": "TRACEABILITY\n界面数字如何追溯到事件与证据\n打开完整血缘页\nTraceability contract\n\n每个状态、数字与图形必须追溯到 API 字段、EventStore 事件或明确派生公式。\n\nLineage fields\n76\nState contracts\n11\nEvents\n87\nEvidence\n6",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      }
+    },
+    "1920x1080": {
+      "user_workspace": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-workspace",
+        "deep": "panorama",
+        "h1": "工作台",
+        "text": "MOSAIC Ω\n模型服务未配置\n让真实 API Agent 团队完成复杂任务\n\n输入目标与约束。后端会调用已配置模型 API，生成 GoalSpec，完成 DAG 调度、Agent 执行、工具调用、验证与证据沉淀。\n\n实际运行由后端任务链产生状态，界面不预置成功结果\n停止\n开始任务 →\nCURRENT WORK\n当前任务\nSUCCEEDED\nv190-ros-tool-001\n自动修复给定 ROS 软件仓库中的可复现故障\n100%\n理解目标\n规划任务\n协同执行\n验证结果\n完成交付\n当前执行\n无活动 Agent\nRun 已结束\n具体工具\nshell\n6 concrete tool event(s)\n协作通信\n0\nMessagePolicy decisions\n记忆唤醒\n0\nContextPacks\n独立验证\n6\nTASK_VERIFIED\n✓\n任务链已完成，证据 6 项\n查看详细进度 ↗\n从模板开始\n全部\n软件工程：ROS 仓库自主修复\n\n诊断故障、生成修复、构建回归并形成可验证交付。\n\n使用此模板 →\n跨域研究：端边云金融分析\n\n隐私约束下完成数据处理、风险建模、合规审核与研究交付。\n\n使用此模板 →\n运行准备\n设置\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n最近运行\n查看全部\nv190-ros-tool-001\nSUCCEEDED\nrun_complete · 9/5/2026, 9:18:19 AM",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_tasks": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-tasks",
+        "deep": "panorama",
+        "h1": "任务进度",
+        "text": "TASK EXECUTION\n任务\n\n当前 Run 的任务节点、依赖、Assignment、执行层、验证与证据全部来自 authoritative snapshot；Benchmark 与故障实验不会混入任务历史。\n\nTasks\n6\nauthoritative DAG nodes\nSucceeded\n6\nverified completion\nRunning\n0\ncurrent execution\nEvidence\n6\ncontent-addressed\n任务运行\nTASK RUNS ONLY\nv190-ros-tool-001\nSUCCEEDED\nrun_complete\n9/5/2026, 9:18:19 AM\nCURRENT RUN\n运行详情\nSUCCEEDED\nRun ID\nv190-ros-tool-001\n状态\nSUCCEEDED\n任务节点\n6/6 成功\n验证\n6/6\nEvidence\n6\n数据来源\nauthoritative snapshot + EventStore\n执行日志\nsubprocess stdout · 已隐藏本机路径\n暂无活动任务\n真实任务图与执行状态\n\n点击节点可核对依赖、Agent、Tier、Evidence 与 Verifier。\n\n6 tasks · 5 dependencies\nSUCCEEDED\nCompile the repaired repository\nros-repair-agent\n→\nSUCCEEDED\nRun tests and produce a root-cause diagno…\nros-repair-agent-backup\n→\nSUCCEEDED\nInventory repository files and ROS packag…\nros-repair-agent\n→\nSUCCEEDED\nApply the smallest patch justified by dia…\nros-repair-agent\n→\nSUCCEEDED\nGenerate evidence-carrying repair report\nros-repair-agent\n→\nSUCCEEDED\nRun the regression test suite\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nAGENT / TIER\nros-repair-agent · EDGE\nCONCRETE TOOL\nshell\nVERIFIER\nPASS\nEVIDENCE\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_deliverables": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-deliverables",
+        "deep": "panorama",
+        "h1": "结果与文件",
+        "text": "DELIVERABLES\n结果与证据\n\n仅展示逻辑文件名与证据类别；系统不会把电脑上的绝对目录暴露到产品界面。\n\n刷新文件\nArtifacts\n12\napproved server roots\nResults\n0\nrun result files\nEvidence\n6\ncontent-addressed evidence\nDeliverables\n6\ntask outputs\n◇\n最终报告 · 执行证据\n最终报告.txt · Run v190-ros-tool-001 · SHA256 7fa8db8dd2e4…\n0.1 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n▱\n修复报告\nrepair_report.md · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:19 AM\n预览\n下载\n◇\n测试结果 · 执行证据\n测试结果.txt · Run v190-ros-tool-001 · SHA256 505475057b5f…\n0.1 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n▱\n回归测试结果\ntest.json · Run v190-ros-tool-001 · ros_repair\n0.2 KB\n9/5/2026, 9:18:18 AM\n预览\n下载\n◇\n构建结果 · 执行证据\n构建结果.txt · Run v190-ros-tool-001 · SHA256 cdc727aa1b5e…\n0.1 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n▱\n构建结果\nbuild.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:16 AM\n预览\n下载\n◇\n修复补丁 · 执行证据\n修复补丁.txt · Run v190-ros-tool-001 · SHA256 a470daedb24f…\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n▱\n修复补丁\npatch.json · Run v190-ros-tool-001 · ros_repair\n0.1 KB\n9/5/2026, 9:18:15 AM\n预览\n下载\n◇\n故障诊断 · 执行证据\n故障诊断.txt · Run v190-ros-tool-001 · SHA256 b5400241b06f…\n0.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n▱\n故障诊断\ndiagnosis.json · Run v190-ros-tool-001 · ros_repair\n1.1 KB\n9/5/2026, 9:18:14 AM\n预览\n下载\n◇\n仓库清单 · 执行证据\n仓库清单.txt · Run v190-ros-tool-001 · SHA256 07a84e060294…\n0.1 KB\n9/5/2026, 9:18:13 AM\n预览\n下载\n▱\n仓库清单\ninventory.json · Run v190-ros-tool-001 · ros_repair\n0.4 KB\n9/5/2026, 9:18:13 AM\n预览\n下载",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "user_settings": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-settings",
+        "deep": "panorama",
+        "h1": "设置",
+        "text": "SETTINGS\n模型服务与 API\n\nAPI Key 由后端安全存储，浏览器只获得“是否已配置”，不会读取原始密钥。\n\n模型服务\nProvider\nDeepSeek\nOpenAI-compatible API\nOllama / local OpenAI-compatible\nAPI Key\n当前 Provider 未配置\n模型\n用于真实任务\n服务地址\n仅在设置页显示\n当前 Provider 独立密钥存储：permission_limited_file；切换 Provider 不复用其他服务的 Key。\n清除当前 Key\n测试连接\n保存设置\n远程执行节点\n\n为 DEVICE / EDGE / CLOUD 注册真实 MQTT Agent。地址仅在设置页配置，不进入评委观测 DTO。\n\nREMOTE RPC\n尚未注册远程执行节点\n单机运行无需配置；跨主机部署建议 TLS + 认证。\nEndpoint ID\n节点名称\n执行层级\nDEVICE\nEDGE\nCLOUD\n远程 Agent ID\nMQTT Broker\n端口\nMQTT Username\nMQTT Password\nTLS\n关闭（仅隔离内网）\n启用 TLS\n节点状态\n启用\n停用\nTopic Prefix\n“测试远程节点”会真正发送 MQTT PLAN_REQUEST，并且只有收到目标 Agent 的 PLAN_RESPONSE 才标记 VERIFIED。\n新建 / 清空\n测试远程节点\n保存节点\n系统运行准备\n实时检查\n!\n模型服务\n未配置\n!\nAPI Key\n缺失\n!\nOR-Tools\n缺失\n高级智能体配置\n\n普通用户无需修改。需要按角色、Skills、层级和模型覆盖配置 Agent 时再进入。\n\nADVANCED\n打开 Agent Studio\n◈\n隐私边界\n\n密钥不进入前端状态、不写 localStorage；观测 API 会脱敏本机文件路径与 loopback 地址。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_panorama": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "panorama",
+        "h1": "技术透视",
+        "text": "RUN PANORAMA\n从用户目标到可核验证据\n点击任意模块继续下钻\n01\nGoalSpec\n目标与约束\n→\n02\nDynamic DAG\n6 tasks\n→\n03\nScheduler\n6 assignments\n→\n04\nAgents / Topology\nv3 · 2 edges\n→\n05\nLow-Entropy\n0 decisions\n→\n06\nMemory\n0 ContextPacks\n→\n07\nToolRuntime\n执行与产物\n→\n08\nVerifier\n6 verified\n→\n09\nRecovery\n0 events\n→\n10\nEvidence\n6 items\n当前 Run 真实性\nFail-closed\nVerdict\nDETERMINISTIC_TOOL_EXECUTOR\nCompetition strict real agent\nfalse\nAssigned agents\n2\nExecution semantics\nCONCRETE_TOOL_EXECUTION_VERIFIED\nConcrete tool calls\n6\nAPI request count\n0\nMeasured API tokens\n数据不足，不估算冒充\n性能与资源\nMeasured / Estimated 分离\nRun status\nSUCCEEDED\nTask success rate\n100.0%\nE2E latency\n7,191.3 ms\nScheduler average cost\n1.4846\nMemory token reduction\n未估算\n感知-规划-执行-反馈闭环\n当前 Run 已验证\n\n6 tasks 全部 SUCCEEDED；6 TASK_VERIFIED；6 evidence；6 次成功的非 task ToolRuntime 执行。\n\n超长程上下文连续性与记忆保持\n系统已实现\n\nMemoryService/ContextPack 已实现；当前 Run 尚无 ContextPack 运行证据。\n\n动态异构拓扑与稀疏路由\n有运行证据\n\nTopology v3，2 条 snapshot 边；Task DAG 也只画真实 edges。\n\n低熵通信 / 冗余抑制\n系统已实现\n\nMessagePolicy 已实现；当前 Run 尚无通信策略记录。\n\n端-边-云调度与模型切分\n需补实跑\n\n当前实际 assignment tier：edge。可执行 split reference 已实现，但必须跑 benchmark 才算证据；真实 LLM layer split 仍不宣称完成。\n\n动态异常 / 需求变更 / 节点失效\n可真实注入\n\nLiveFaultMailbox/RecoveryEngine 已实现；需执行并保留证据。\n\n2 个及以上跨领域长程任务\n需完成两场景\n\n已提供两个场景，但仅代码存在不算运行证据。\n\n多模型 / Agent 可扩展接口\n接口已实现\n\n3 类 Provider；Agent Studio 可配置角色、Skill、权限、Tier、模型和最大负载。接口实现不冒充各 Provider 金标实测。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_dag": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "dag",
+        "h1": "技术透视",
+        "text": "DYNAMIC TASK GRAPH\nDAG 与 Task Inspector\n6 tasks · 5 authoritative edges\nCompile the repaired rep…\nSUCCEEDED\nros-repair-agent\nRun tests and produce a …\nSUCCEEDED\nros-repair-agent-backup\nInventory repository fil…\nSUCCEEDED\nros-repair-agent\nApply the smallest patch…\nSUCCEEDED\nros-repair-agent\nGenerate evidence-carryi…\nSUCCEEDED\nros-repair-agent\nRun the regression test …\nSUCCEEDED\nros-repair-agent\nCompile the repaired repository\n\nbuild · SUCCEEDED\n\nDEPENDENCIES\npatch\nSCHEDULER ASSIGNMENT\nros-repair-agent · EDGE\nMODEL\nlocal-model\nTOOL CALL\nshell\nVERIFICATION\nPASS\nEVIDENCE IDS\nevi_beaa8becffff47008b3498f19dfc44c3",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_scheduler": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "scheduler",
+        "h1": "技术透视",
+        "text": "SCHEDULER DECISION\n优化求解 / 代价模型 / 真实 Assignment\n6 assignments · NON_ORTOOLS_RUN\n优化目标与约束\nmin Σt,d xtdCtd\n\nC = Cfixed + Clatency + Ctoken + Cenergy + Cfailure + Cmigration + Cload + Cplacement\n\n每个 Task 仅分配一次\n设备容量约束\n技能/权限可行性\n隐私与位置约束\n真实 Assignment\nAssignments\n6\nSolver\nNON_ORTOOLS_RUN\nAverage cost\n1.4846\nActual tiers\nedge\nTASK\tSELECTED AGENT\tACTUAL TIER\tRECOMMENDED\tTOTAL COST\nbuild\tros-repair-agent\tEDGE\tEDGE\t1.7500\ndiagnose\tros-repair-agent-backup\tEDGE\tEDGE\t2.0250\ninventory\tros-repair-agent\tEDGE\tEDGE\t0.2250\npatch\tros-repair-agent\tEDGE\tEDGE\t2.1250\nreport\tros-repair-agent\tEDGE\tEDGE\t1.2946\ntest\tros-repair-agent\tEDGE\tEDGE\t1.4881\nCost Breakdown · 实际被选 Assignment\nTASK\tFIXED + LATENCY\tTOKEN + ENERGY\tFAILURE + LOAD + MIGRATION + PLACEMENT\tTOTAL\nbuild\t0.000 + 0.000\t0.000 + 0.000\t1.750 + 0.000 + 0.000 + 0.000\t1.7500\ndiagnose\t0.000 + 0.000\t0.000 + 0.000\t2.025 + 0.000 + 0.000 + 0.000\t2.0250\ninventory\t0.000 + 0.000\t0.000 + 0.000\t0.225 + 0.000 + 0.000 + 0.000\t0.2250\npatch\t0.000 + 0.000\t0.000 + 0.000\t2.125 + 0.000 + 0.000 + 0.000\t2.1250\nreport\t0.000 + 0.000\t0.000 + 0.000\t1.295 + 0.000 + 0.000 + 0.000\t1.2946\ntest\t0.000 + 0.000\t0.000 + 0.000\t1.488 + 0.000 + 0.000 + 0.000\t1.4881\nAgent Reliability · Beta Posterior\nE[p] = α / (α + β)    ·    γ = e−λΔt\n\n可靠性不是固定“成功率”文案；若后端存在 posterior/measurement metadata，则以能力记录为准。当前 capability 数：2。",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_collaboration": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "collaboration",
+        "h1": "技术透视",
+        "text": "MULTI-AGENT COLLABORATION\n谁与谁正在协作\nTopology v3 · 2 directed edges · Algebraic Connectivity λ₂=2.000\nros-repair-agent\nAGENT\nros-repair-agen…\nAGENT\nros-repair-agent → ros-repair-agent-backup\n\nEdge score: Sᵢⱼ = 0.40D + 0.30I + 0.20R + 0.10L\n\nEDGE SCORE\n0.8000\nREASON\ntask_dependency\nTASK IDS\ndiagnose, inventory\nMESSAGES / DECISIONS\n0\nPOLICY ACTIONS\n无记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_communication": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "communication",
+        "h1": "技术透视",
+        "text": "LOW-ENTROPY COMMUNICATION\nSEND / MERGE / DROP / DEFER 与压缩链\n0 policy decisions\n低熵通信决策链\nKnowledgeDigest\n→\nReceiver-aware Δ\n→\nContent Hash Dedup\n→\nDecision Impact\n→\nTTL / Token Budget\n→\nSEND / MERGE / DEFER / DROP\n\n只展示后端真实 MessagePolicy 决策；没有受控 baseline 时不凭空生成“节省 xx%”。\n\n当前 Run 通信策略分布\nSEND\n0\nMERGE\n0\nDEFER\n0\nDROP\n0\n当前 Run 最近通信决策\nMESSAGE\tFROM\tTO\tPOLICY\tREDUCTION / SIZE\n当前 Run 没有对应运行记录",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_memory": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "memory",
+        "h1": "技术透视",
+        "text": "HIERARCHICAL MEMORY\nWorking / Episodic / Semantic / Procedural\n90 records · 0 ContextPacks\nWORKING\nWorking Memory\n\n当前 Goal、DAG 与任务上下文\n\nEPISODIC\nEpisodic Memory\n\nRun、失败与恢复经历\n\nSEMANTIC\nSemantic Memory\n\n经验证事实、约束与知识\n\nPROCEDURAL\nProcedural Memory\n\n工具过程、恢复模式与操作经验\n\nMemory Ranking\nScore = 0.26Rtask + 0.16Revidence + 0.18I + 0.10C + 0.10Rtime + 0.06N + 0.14S + Bverified\nRtime = e−age/86400\n\n权重用于说明代码中的选择逻辑；最终选择数量与 token estimate 仍以当前 Snapshot 为准。\n\n当前 Run ContextPack 选择结果\n\nEstimated Context Token 与真实 Provider API usage 严格分开。\n\nMemory records\n90\nContextPacks\n0\nFull history\n0 EST.\nSelected context\n0 EST.\nEstimated reduction\n—\nReal API tokens\nINSUFFICIENT DATA",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_verifier": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "verifier",
+        "h1": "技术透视",
+        "text": "INDEPENDENT VERIFICATION\nExecution → Evidence → Predicate → Verdict\n6 TASK_VERIFIED · 6 evidence\n01\nExecution\n6 TOOL_EXECUTED events\n02\nEvidence\n6 content-addressed items\n03\nPredicates\ndeterministic first; semantic only when required\n04\nIndependent Verdict\n6 PASS / 0 FAIL\nPredicate → Evidence SHA256 → Verdict\n\n每行直接来自 TASK_VERIFIED + EvidenceStore；不接受 Agent 自报完成作为最终验收。\n\nTASK\tVERDICT\tPREDICATE CHECKS\tEVIDENCE SHA256\tVERIFIER\nreport\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_1e9db08f66ce41b697252ff43e41a1c2\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/repair_report.md\n✓ file_contains:ros_repo/artifacts/repair_report.md:Final pytest: PASS\t7fa8db8dd2e491fa8…\tdeterministic-verifier\ntest\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_acd6e15c58584f0b9eb98d7bac59824c\n✓ exit_code==0\t505475057b5f63554…\tdeterministic-verifier\nbuild\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_beaa8becffff47008b3498f19dfc44c3\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/build.json\tcdc727aa1b5edeb04…\tdeterministic-verifier\npatch\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_616d4f60dea4431da027167acf060b12\n✓ exit_code==0\n✓ file_contains:ros_repo/src/demo_ros_pkg/demo_ros_pkg/controller.py:return left + right\n✓ file_exists:ros_repo/artifacts/patch.json\ta470daedb24f1e230…\tdeterministic-verifier\ndiagnose\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_ccc6f859c2ba4c2eb26eabb3a472796b\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/diagnosis.json\tb5400241b06f0bb40…\tdeterministic-verifier\ninventory\tPASS\t✓ execution_success\n✓ evidence_present\n✓ evidence_hash:evi_38b5efa4330840dd9b06bc4cc358054d\n✓ exit_code==0\n✓ file_exists:ros_repo/artifacts/inventory.json\t07a84e06029463295…\tdeterministic-verifier",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_recovery": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "recovery",
+        "h1": "技术透视",
+        "text": "RECOVERY CHAIN\n异常注入、失效检测、重分配与恢复\n8 adaptation / recovery events\nAdaptation / Recovery timeline\n\n动态拓扑适应与 RecoveryEngine 恢复分开标记，避免把“重新路由”冒充“重试恢复”。\n\n9/5/2026, 9:18:12 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments\n9/5/2026, 9:18:12 AM\nTASK_ASSIGNED\ninventory · authoritative event\n9/5/2026, 9:18:13 AM\nTASK_ASSIGNED\ndiagnose · authoritative event\n9/5/2026, 9:18:14 AM\nTASK_ASSIGNED\npatch · authoritative event\n9/5/2026, 9:18:15 AM\nTASK_ASSIGNED\nbuild · authoritative event\n9/5/2026, 9:18:16 AM\nTASK_ASSIGNED\ntest · authoritative event\n9/5/2026, 9:18:18 AM\nTASK_ASSIGNED\nreport · authoritative event\n9/5/2026, 9:18:19 AM\nTOPOLOGY_REBUILT\ntopology-service · dynamic topology recomputed from online registry and task assignments",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lab": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "lab",
+        "h1": "技术透视",
+        "text": "VALIDATION LAB\n受控变量实验与 Baseline\n打开完整实验页\n实验展示原则\n\n目的 → 控制变量 → Baseline → MOSAIC → 指标 → 原始 JSON。优先展示本次成功 Experiment Job；若尚未运行，则展示 v1.9.0 包内重新生成的受控 benchmark，并明确区分。\n\nExperiment jobs\n0\nBenchmark succeeded\n0\nPackaged benchmarks\n0\nTruth boundary\nMEASURED / ESTIMATED separated\nTopology replay\n待运行\n\n无结果 · same-message-set replay\n\nMemory ablation\n待运行\n\n无结果 · token=estimate\n\nScheduler ablation\n待运行\n\n无结果 · same tasks / registry / weights / capacities\n\nLong horizon\n待运行\n\n无结果 · authoritative EventStore\n\nSplit inference\n待运行\n\n无结果 · reference MLP, not LLM layer split",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      },
+      "judge_lineage": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "active": "view-judge",
+        "deep": "lineage",
+        "h1": "技术透视",
+        "text": "TRACEABILITY\n界面数字如何追溯到事件与证据\n打开完整血缘页\nTraceability contract\n\n每个状态、数字与图形必须追溯到 API 字段、EventStore 事件或明确派生公式。\n\nLineage fields\n76\nState contracts\n11\nEvents\n87\nEvidence\n6",
+        "horizontalOverflowPx": 0,
+        "runtimeErrors": []
+      }
+    }
+  },
+  "surface_contract": {
+    "user_views": [
+      "workspace",
+      "tasks",
+      "deliverables",
+      "settings"
+    ],
+    "judge_panels": [
+      "panorama",
+      "dag",
+      "scheduler",
+      "collaboration",
+      "communication",
+      "memory",
+      "verifier",
+      "recovery",
+      "lab",
+      "lineage"
+    ],
+    "surface_count_per_viewport": 14
+  },
+  "horizontal_overflow_failures": [],
+  "runtime_error_failures": [],
+  "passed": true
+}

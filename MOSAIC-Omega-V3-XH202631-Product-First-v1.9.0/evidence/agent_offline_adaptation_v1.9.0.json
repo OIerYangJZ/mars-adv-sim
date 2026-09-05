@@ -1,0 +1,1127 @@
+{
+  "run_id": "v190-ros-agent-offline-001",
+  "all_succeeded": true,
+  "task_count": 6,
+  "event_count": 88,
+  "evidence_count": 6,
+  "mailbox_status": [
+    {
+      "request_id": "inj-20260905-091907-fdfbca26",
+      "run_id": "v190-ros-agent-offline-001",
+      "fault": "agent_offline",
+      "requirement": null,
+      "requested_at": 1788599947.03137,
+      "requested_by": "v1.9.0-validation",
+      "state": "APPLIED",
+      "state_source": "running MainChain round hook",
+      "finished_at": 1788599947.6720955,
+      "detail": {
+        "agent_id": "ros-repair-agent",
+        "recovery_semantics": "future ready tasks are rescheduled against the updated online registry; no fake TASK_RECOVERED event is emitted",
+        "round_index": 1,
+        "continue_run": true
+      },
+      "mailbox_path": "/mnt/data/mosaic_work/MOSAIC-Omega-V3-XH202631-Product-First-v1.9.0/.validation_workspace/scenarios/ros_fault_offline/control/injections/v190-ros-agent-offline-001/inj-20260905-091907-fdfbca26.applied.json"
+    }
+  ],
+  "assignments": [
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent-backup",
+      "resource_id": "local-device"
+    },
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent-backup",
+      "resource_id": "local-device"
+    },
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent",
+      "resource_id": "local-device"
+    },
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent-backup",
+      "resource_id": "local-device"
+    },
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent-backup",
+      "resource_id": "local-device"
+    },
+    {
+      "task_id": null,
+      "agent_id": "ros-repair-agent-backup",
+      "resource_id": "local-device"
+    }
+  ],
+  "adaptation_events": [
+    {
+      "type": "TOPOLOGY_REBUILT",
+      "task_id": null,
+      "payload": {
+        "version": 1,
+        "previous_version": null,
+        "node_count": 2,
+        "edge_count": 0,
+        "added_edges": [],
+        "removed_edges": [],
+        "affected_agents": [],
+        "affected_task_ids": [],
+        "full_rebuild": true,
+        "lambda2": 0.0,
+        "connected": true,
+        "reason": "dynamic topology recomputed from online registry and task assignments"
+      },
+      "ts": 1788599947.044829
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "inventory",
+      "payload": {
+        "assignment": {
+          "task_id": "inventory",
+          "agent_id": "ros-repair-agent",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 0.22499999999999964,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 0.22499999999999964,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=0.2250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_5eb35d1fe2604e609542e189ed2fd0ff",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_57bcf66b6e1348e8b8f2224c3ee914c2",
+          "schema_version": "0.1",
+          "created_at": 1788599947.0507288,
+          "node_id": "inventory"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "inventory",
+          "node_id": "inventory",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Inventory repository files and ROS package metadata",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [],
+          "predecessors": [],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/inventory.json"
+          ],
+          "acceptance": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/inventory.json"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "inventory",
+            "agent_id": "ros-repair-agent",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 0.22499999999999964,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 0.22499999999999964,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=0.2250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_5eb35d1fe2604e609542e189ed2fd0ff",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_57bcf66b6e1348e8b8f2224c3ee914c2",
+            "schema_version": "0.1",
+            "created_at": 1788599947.0507288,
+            "node_id": "inventory"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "inventory",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599947.0512655
+    },
+    {
+      "type": "FAULT_INJECTED",
+      "task_id": "inventory",
+      "payload": {
+        "request_id": "inj-20260905-091907-fdfbca26",
+        "fault_type": "AGENT_OFFLINE",
+        "requested_at": 1788599947.03137,
+        "requested_by": "v1.9.0-validation",
+        "injected_after_round": 1,
+        "injection_mode": "live_console_mailbox_round_boundary",
+        "agent_id": "ros-repair-agent",
+        "control_semantics": "mark registry agent offline; subsequent scheduler rounds must exclude it"
+      },
+      "ts": 1788599947.6614938
+    },
+    {
+      "type": "TOPOLOGY_REBUILT",
+      "task_id": null,
+      "payload": {
+        "version": 2,
+        "previous_version": 1,
+        "node_count": 1,
+        "edge_count": 0,
+        "added_edges": [],
+        "removed_edges": [],
+        "affected_agents": [],
+        "affected_task_ids": [],
+        "full_rebuild": true,
+        "lambda2": 0.0,
+        "connected": true,
+        "reason": "dynamic topology recomputed from online registry and task assignments"
+      },
+      "ts": 1788599947.6623175
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "diagnose",
+      "payload": {
+        "assignment": {
+          "task_id": "diagnose",
+          "agent_id": "ros-repair-agent-backup",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 2.0250000000000004,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 2.0250000000000004,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=2.0250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent-backup",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_1e9b10e5733e40008b157eebe2aebaa9",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_13b637e30b0742d794a64524ba9c1fa6",
+          "schema_version": "0.1",
+          "created_at": 1788599947.6813183,
+          "node_id": "diagnose"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "diagnose",
+          "node_id": "diagnose",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Run tests and produce a root-cause diagnosis",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [
+            "inventory"
+          ],
+          "predecessors": [
+            "inventory"
+          ],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/diagnosis.json"
+          ],
+          "acceptance": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/diagnosis.json"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "diagnose",
+            "agent_id": "ros-repair-agent-backup",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 2.0250000000000004,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 2.0250000000000004,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=2.0250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent-backup",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_1e9b10e5733e40008b157eebe2aebaa9",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_13b637e30b0742d794a64524ba9c1fa6",
+            "schema_version": "0.1",
+            "created_at": 1788599947.6813183,
+            "node_id": "diagnose"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "diagnose",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599947.6816986
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "patch",
+      "payload": {
+        "assignment": {
+          "task_id": "patch",
+          "agent_id": "ros-repair-agent-backup",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 2.125000105418524,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 2.125000105418524,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=2.1250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent-backup",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_75eabe4395d84723b1244947071bd494",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_b9ef851f72b7478fae2021066c0d2e9e",
+          "schema_version": "0.1",
+          "created_at": 1788599949.1971805,
+          "node_id": "patch"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "patch",
+          "node_id": "patch",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Apply the smallest patch justified by diagnosis",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [
+            "diagnose"
+          ],
+          "predecessors": [
+            "diagnose"
+          ],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0",
+            "file_contains:ros_repo/src/demo_ros_pkg/demo_ros_pkg/controller.py:return left + right",
+            "file_exists:ros_repo/artifacts/patch.json"
+          ],
+          "acceptance": [
+            "exit_code==0",
+            "file_contains:ros_repo/src/demo_ros_pkg/demo_ros_pkg/controller.py:return left + right",
+            "file_exists:ros_repo/artifacts/patch.json"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "patch",
+            "agent_id": "ros-repair-agent-backup",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 2.125000105418524,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 2.125000105418524,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=2.1250; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent-backup",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_75eabe4395d84723b1244947071bd494",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_b9ef851f72b7478fae2021066c0d2e9e",
+            "schema_version": "0.1",
+            "created_at": 1788599949.1971805,
+            "node_id": "patch"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "patch",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599949.1974535
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "build",
+      "payload": {
+        "assignment": {
+          "task_id": "build",
+          "agent_id": "ros-repair-agent-backup",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 1.7500001471847337,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 1.7500001471847337,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=1.7500; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent-backup",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_1f72f180e66f4d938ea3ac7f7d1b2f2b",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_7689b1379e4444ddabc52ba22f1bc6fb",
+          "schema_version": "0.1",
+          "created_at": 1788599949.8234599,
+          "node_id": "build"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "build",
+          "node_id": "build",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Compile the repaired repository",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [
+            "patch"
+          ],
+          "predecessors": [
+            "patch"
+          ],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/build.json"
+          ],
+          "acceptance": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/build.json"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "build",
+            "agent_id": "ros-repair-agent-backup",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 1.7500001471847337,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 1.7500001471847337,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=1.7500; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent-backup",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_1f72f180e66f4d938ea3ac7f7d1b2f2b",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_7689b1379e4444ddabc52ba22f1bc6fb",
+            "schema_version": "0.1",
+            "created_at": 1788599949.8234599,
+            "node_id": "build"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "build",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599949.823747
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "test",
+      "payload": {
+        "assignment": {
+          "task_id": "test",
+          "agent_id": "ros-repair-agent-backup",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 1.4880955084627911,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 1.4880955084627911,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=1.4881; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent-backup",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_304de03de5ee44fda14815fc0463b476",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_dd40fa5186e3432e8029d3d86d762503",
+          "schema_version": "0.1",
+          "created_at": 1788599951.0045848,
+          "node_id": "test"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "test",
+          "node_id": "test",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Run the regression test suite",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [
+            "build"
+          ],
+          "predecessors": [
+            "build"
+          ],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0"
+          ],
+          "acceptance": [
+            "exit_code==0"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "test",
+            "agent_id": "ros-repair-agent-backup",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 1.4880955084627911,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 1.4880955084627911,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=1.4881; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent-backup",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_304de03de5ee44fda14815fc0463b476",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_dd40fa5186e3432e8029d3d86d762503",
+            "schema_version": "0.1",
+            "created_at": 1788599951.0045848,
+            "node_id": "test"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "test",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599951.0048785
+    },
+    {
+      "type": "TASK_ASSIGNED",
+      "task_id": "report",
+      "payload": {
+        "assignment": {
+          "task_id": "report",
+          "agent_id": "ros-repair-agent-backup",
+          "model_id": "local-model",
+          "tool_id": "shell",
+          "resource_id": "local-device",
+          "total_cost": 1.294643281925112,
+          "cost_breakdown": {
+            "fixed": 0.0,
+            "latency": 0.0,
+            "token": 0.0,
+            "energy": 0.0,
+            "failure": 1.294643281925112,
+            "migration": 0.0,
+            "load": 0.0
+          },
+          "policy": "greedy",
+          "reason": "eligible bundle on local-device; cost=1.2946; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+          "execution_tier": "edge",
+          "recommended_tier": "edge",
+          "actual_execution_tier": "edge",
+          "placement_fallback": false,
+          "placement_evidence": {
+            "actual_tier_source": "selected_agent_runtime_profile",
+            "agent_id": "ros-repair-agent-backup",
+            "agent_declared_tier": "edge",
+            "recommended_tier_source": "edge_cloud_placement_engine"
+          },
+          "partition_policy": "none",
+          "partition_descriptor": {
+            "partition_policy": "none",
+            "split_layer_index": 0,
+            "device_stage_ratio": 1.0,
+            "cloud_stage_ratio": 0.0,
+            "bandwidth_min_mbps": 10.0
+          },
+          "solver_provenance": {
+            "engine": "mosaic_builtin",
+            "algorithm": "greedy",
+            "status": "SELECTED"
+          },
+          "assignment_id": "asn_94a56dd58da4439c8ddcd844c12b4af9",
+          "run_id": "v190-ros-agent-offline-001",
+          "trace_id": "trace_4c2efaad526d44a9981c192ae7cb923c",
+          "schema_version": "0.1",
+          "created_at": 1788599952.6325853,
+          "node_id": "report"
+        },
+        "projection": {
+          "run_id": "v190-ros-agent-offline-001",
+          "task_id": "report",
+          "node_id": "report",
+          "task_type": "ros_repair",
+          "type": "ros_repair",
+          "description": "Generate evidence-carrying repair report",
+          "state": "READY",
+          "status": "READY",
+          "depends_on": [
+            "test"
+          ],
+          "predecessors": [
+            "test"
+          ],
+          "priority": 5,
+          "required_capabilities": [
+            "ros_repair"
+          ],
+          "required_permissions": [
+            "shell.execute"
+          ],
+          "acceptance_conditions": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/repair_report.md",
+            "file_contains:ros_repo/artifacts/repair_report.md:Final pytest: PASS"
+          ],
+          "acceptance": [
+            "exit_code==0",
+            "file_exists:ros_repo/artifacts/repair_report.md",
+            "file_contains:ros_repo/artifacts/repair_report.md:Final pytest: PASS"
+          ],
+          "privacy_level": "normal",
+          "data_location": null,
+          "estimated_tokens": 0,
+          "max_latency_ms": null,
+          "inputs": {},
+          "outputs": {},
+          "evidence_dependencies": [],
+          "resource_requirements": {
+            "device_location": "local"
+          },
+          "risk": "normal",
+          "version": 4,
+          "attempt": 0,
+          "paused_from": null,
+          "assignment": {
+            "task_id": "report",
+            "agent_id": "ros-repair-agent-backup",
+            "model_id": "local-model",
+            "tool_id": "shell",
+            "resource_id": "local-device",
+            "total_cost": 1.294643281925112,
+            "cost_breakdown": {
+              "fixed": 0.0,
+              "latency": 0.0,
+              "token": 0.0,
+              "energy": 0.0,
+              "failure": 1.294643281925112,
+              "migration": 0.0,
+              "load": 0.0
+            },
+            "policy": "greedy",
+            "reason": "eligible bundle on local-device; cost=1.2946; recommended_tier=edge; actual_tier=edge; placement_fallback=false; partition_recommendation=none; hard privacy/permission/location filters passed",
+            "execution_tier": "edge",
+            "recommended_tier": "edge",
+            "actual_execution_tier": "edge",
+            "placement_fallback": false,
+            "placement_evidence": {
+              "actual_tier_source": "selected_agent_runtime_profile",
+              "agent_id": "ros-repair-agent-backup",
+              "agent_declared_tier": "edge",
+              "recommended_tier_source": "edge_cloud_placement_engine"
+            },
+            "partition_policy": "none",
+            "partition_descriptor": {
+              "partition_policy": "none",
+              "split_layer_index": 0,
+              "device_stage_ratio": 1.0,
+              "cloud_stage_ratio": 0.0,
+              "bandwidth_min_mbps": 10.0
+            },
+            "solver_provenance": {
+              "engine": "mosaic_builtin",
+              "algorithm": "greedy",
+              "status": "SELECTED"
+            },
+            "assignment_id": "asn_94a56dd58da4439c8ddcd844c12b4af9",
+            "run_id": "v190-ros-agent-offline-001",
+            "trace_id": "trace_4c2efaad526d44a9981c192ae7cb923c",
+            "schema_version": "0.1",
+            "created_at": 1788599952.6325853,
+            "node_id": "report"
+          },
+          "result": null,
+          "evidence": [],
+          "metadata": {
+            "tool": {
+              "name": "shell",
+              "arguments": {
+                "command": [
+                  "/opt/pyvenv/bin/python",
+                  "repair_tool.py",
+                  "report",
+                  "ros_repo"
+                ]
+              },
+              "timeout_s": 20
+            },
+            "risk_detail": {
+              "level": "normal"
+            },
+            "inputs": {},
+            "outputs": {}
+          }
+        }
+      },
+      "ts": 1788599952.6328838
+    }
+  ],
+  "truth_note": "Agent-offline adaptation is shown as FAULT_INJECTED -> topology rebuild / subsequent scheduler assignments. It is not relabeled as RecoveryEngine retry unless RECOVERY_PLANNED/TASK_RECOVERED actually exist."
+}

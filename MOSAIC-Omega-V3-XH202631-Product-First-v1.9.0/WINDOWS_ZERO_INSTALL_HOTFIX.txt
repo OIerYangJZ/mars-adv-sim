@@ -1,0 +1,36 @@
+MOSAIC-Omega v1.9.0 Windows Zero-Install Hotfix
+================================================
+
+Problem fixed
+-------------
+Previous Windows startup created a fresh .venv and attempted pip installation.
+On networks where PyPI/SSL/proxy access failed, startup could stop with:
+  - SSL: UNEXPECTED_EOF_WHILE_READING
+  - setuptools build dependency download failure
+  - Core runtime dependencies are unavailable after installation
+
+Current startup contract
+------------------------
+1. Double-click START_MOSAIC.bat.
+2. No .venv is created.
+3. No pip command is executed.
+4. No PyPI access is required.
+5. The bundled src/ tree is imported directly.
+6. GoalSpec schema validation has a dependency-free stdlib fallback.
+7. DeepSeek/OpenAI-compatible API can use the built-in stdlib HTTP transport when the optional OpenAI SDK is absent.
+8. Missing MQTT/OR-Tools never blocks the desktop UI. Strict OR-Tools jobs remain fail-closed when OR-Tools is absent.
+
+Validation performed in the build environment
+---------------------------------------------
+- Python source compile check: PASS
+- Unit tests: PASS (one expected OR-Tools skip in environment without OR-Tools)
+- Zero-third-party runtime diagnostic using `python -S`: PASS
+- Zero-third-party console HTTP startup using `python -S`: PASS
+- /api/health: PASS
+- /api/settings/providers: PASS
+- Release package static audit: 12/12 PASS
+
+Windows note
+------------
+The build environment is Linux, so physical Windows double-click execution cannot be claimed as directly tested here.
+The Windows BAT is ASCII + CRLF and no longer contains the previous venv/pip installation path.

@@ -1,0 +1,36 @@
+MOSAIC-Ω V3 v1.9.0 FUSION VALIDATION
+=====================================
+Status: LOCAL_RELEASE_ACCEPTED_EXTERNAL_STRICT_REVALIDATION_REQUIRED
+
+Local test matrix
+- Unit: 94 PASS / 1 SKIP / 0 FAIL (95 collected)
+- Integration: 8 PASS / 0 FAIL (8 collected)
+- Total: 102 PASS / 1 SKIP / 0 FAIL (103 collected)
+
+Release hygiene
+- Release package audit: 12/12 PASS
+- Artifact truth gate: 33/33 PASS
+
+UI
+- Layout: 42/42 surfaces PASS, 0 horizontal overflow, 0 runtime errors
+- Interaction: 16 editable fields, 47 visible user-view actions, 10 technical panels, 0 failures
+- Audit source run: v190-ros-tool-001 (CONCRETE_TOOL_EXECUTION_VERIFIED)
+
+Cross-domain deterministic-tool runs
+- ROS Repair: 6/6 tasks, 6 TOOL_EXECUTED, 6 Evidence
+- Financial Research: 6/6 tasks, 6 TOOL_EXECUTED, 6 Evidence
+
+Controlled validation
+- Long horizon: 1153 measured EventStore events; 64/64 tasks; 67 messages; Evidence invalidation recovered; 19.653 s
+- Low-entropy replay: Full Mesh 20 -> MOSAIC Sparse 10 transmissions; bytes reduction 50.0% (REPLAY, same message set)
+- Memory: 7808 -> 721 ESTIMATED tokens; key facts 4/4; reduction 90.77% ESTIMATED
+- Split: max_abs_error=0.0; activation=232 bytes; claim=REFERENCE_MLP_NOT_LLM_SPLIT
+- OR-Tools in current build environment: False
+
+Truth boundary
+- 1153 Events are NOT 1153 LLM calls.
+- Estimated tokens are NOT provider billing tokens.
+- Replay comparison is NOT multiple physical-network runs.
+- Reference MLP split is NOT a real LLM layer split.
+- Historical DeepSeek evidence under evidence/legacy is not current v1.9.0 strict gold evidence.
+- Fresh DeepSeek + strict OR-Tools + physical remote MQTT acceptance must be rerun on the competition machine.

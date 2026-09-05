@@ -1,0 +1,1 @@
+Frontend start button no longer blocked by provider/OR-Tools readiness. Environment issues are reported during task execution instead of making the UI appear frozen.

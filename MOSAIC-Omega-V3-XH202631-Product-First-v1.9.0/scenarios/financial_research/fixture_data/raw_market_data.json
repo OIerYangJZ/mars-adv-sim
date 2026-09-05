@@ -1,0 +1,22 @@
+{
+  "company_ticker": "TECH-6000",
+  "company_name": "星海量子智能科技股份有限公司",
+  "period": "2026-Q2",
+  "news_items": [
+    {
+      "date": "2026-08-15",
+      "headline": "星海量子发布新一代边缘AI芯片，突破超长程分布式推理瓶颈",
+      "sentiment_score": 0.85
+    },
+    {
+      "date": "2026-08-20",
+      "headline": "行业供应链短缺缓解，三季度产能利用率提升至 92%",
+      "sentiment_score": 0.72
+    },
+    {
+      "date": "2026-08-28",
+      "headline": "机构密集调研智能终端与芯片研发进展，关注端云协同架构",
+      "sentiment_score": 0.78
+    }
+  ]
+}

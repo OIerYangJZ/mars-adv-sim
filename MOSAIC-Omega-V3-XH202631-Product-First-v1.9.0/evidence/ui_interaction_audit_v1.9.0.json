@@ -1,0 +1,629 @@
+{
+  "base_url": "http://127.0.0.1:8091",
+  "views": {
+    "workspace": {
+      "fields": [
+        {
+          "tag": "textarea",
+          "id": "goalInput",
+          "type": "textarea",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        }
+      ],
+      "actions": [
+        {
+          "tag": "button",
+          "id": "stopJobBtn",
+          "text": "停止",
+          "disabled": true,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "startCustomBtn",
+          "text": "开始任务 →",
+          "disabled": true,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "查看详细进度 ↗",
+          "disabled": false,
+          "href": "",
+          "dataGo": "tasks"
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "全部",
+          "disabled": false,
+          "href": "",
+          "dataGo": "lab"
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "使用此模板 →",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "使用此模板 →",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "设置",
+          "disabled": false,
+          "href": "",
+          "dataGo": "settings"
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "查看全部",
+          "disabled": false,
+          "href": "",
+          "dataGo": "tasks"
+        }
+      ]
+    },
+    "tasks": {
+      "fields": [],
+      "actions": [
+        {
+          "tag": "button",
+          "id": "",
+          "text": "v190-ros-tool-001SUCCEEDEDrun_complete9/5/2026, 9:18:19 AM",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDCompile the repaired repositoryros-repair-agent",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDRun tests and produce a root-cause diagno…ros-repair-agent-backup",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDInventory repository files and ROS packag…ros-repair-agent",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDApply the smallest patch justified by dia…ros-repair-agent",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDGenerate evidence-carrying repair reportros-repair-agent",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "SUCCEEDEDRun the regression test suiteros-repair-agent",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        }
+      ]
+    },
+    "deliverables": {
+      "fields": [],
+      "actions": [
+        {
+          "tag": "button",
+          "id": "refreshArtifactsBtn",
+          "text": "刷新文件",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Freport%2F7fa8db8dd2e491fa877cadb2a1e5cc1119e2857198d34eeac63da685c80103ec.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Frepair_report.md",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Ftest%2F505475057b5f63554ed2976ab104b618b34cac5d762f4f9146a74c70121b94f1.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Ftest.json",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Fbuild%2Fcdc727aa1b5edeb043c11d28e569937e57d92cdf0566b8fde21b0e4d0ebd0a7c.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Fbuild.json",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Fpatch%2Fa470daedb24f1e230404ba7f14ce02140e3cc76bdf8257755c7175703a22e72e.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Fpatch.json",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Fdiagnose%2Fb5400241b06f0bb4045c20080a2a38dacf78fba41c4f89e32706e2a5285d8d3f.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Fdiagnosis.json",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=evidence%3Av190-ros-tool-001%2Finventory%2F07a84e06029463295871f7dce257151c090a3487161e72030a66689800fc21d7.txt",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "预览",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "text": "下载",
+          "disabled": false,
+          "href": "/api/control/artifact-download?artifact_id=deliverables%3Av190-ros-tool-001%2Fros_repair%2Finventory.json",
+          "dataGo": ""
+        }
+      ]
+    },
+    "settings": {
+      "fields": [
+        {
+          "tag": "select",
+          "id": "providerSelect",
+          "type": "select-one",
+          "disabled": false,
+          "readOnly": null,
+          "value": "deepseek",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "providerKey",
+          "type": "password",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "providerModel",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "deepseek-v4-flash",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "providerBase",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "https://api.deepseek.com",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointId",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointName",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "select",
+          "id": "endpointTier",
+          "type": "select-one",
+          "disabled": false,
+          "readOnly": null,
+          "value": "edge",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointAgentId",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointHost",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointPort",
+          "type": "number",
+          "disabled": false,
+          "readOnly": false,
+          "value": "1883",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointUsername",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointPassword",
+          "type": "password",
+          "disabled": false,
+          "readOnly": false,
+          "value": "",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "select",
+          "id": "endpointTls",
+          "type": "select-one",
+          "disabled": false,
+          "readOnly": null,
+          "value": "false",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "select",
+          "id": "endpointEnabled",
+          "type": "select-one",
+          "disabled": false,
+          "readOnly": null,
+          "value": "true",
+          "tested": true,
+          "editable": true
+        },
+        {
+          "tag": "input",
+          "id": "endpointPrefix",
+          "type": "text",
+          "disabled": false,
+          "readOnly": false,
+          "value": "mosaic/v3",
+          "tested": true,
+          "editable": true
+        }
+      ],
+      "actions": [
+        {
+          "tag": "button",
+          "id": "clearProviderKeyBtn",
+          "text": "清除当前 Key",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "testProviderBtn",
+          "text": "测试连接",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "saveProviderBtn",
+          "text": "保存设置",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "newEndpointBtn",
+          "text": "新建 / 清空",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "testEndpointBtn",
+          "text": "测试远程节点",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "saveEndpointBtn",
+          "text": "保存节点",
+          "disabled": false,
+          "href": "",
+          "dataGo": ""
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "text": "打开 Agent Studio",
+          "disabled": false,
+          "href": "",
+          "dataGo": "agents"
+        }
+      ]
+    }
+  },
+  "editable_failures": [],
+  "button_semantic_failures": [],
+  "clickable_non_native_failures": [],
+  "safe_click_failures": [],
+  "judge_panels": [
+    {
+      "panel": "panorama",
+      "visible": true
+    },
+    {
+      "panel": "dag",
+      "visible": true
+    },
+    {
+      "panel": "scheduler",
+      "visible": true
+    },
+    {
+      "panel": "collaboration",
+      "visible": true
+    },
+    {
+      "panel": "communication",
+      "visible": true
+    },
+    {
+      "panel": "memory",
+      "visible": true
+    },
+    {
+      "panel": "verifier",
+      "visible": true
+    },
+    {
+      "panel": "recovery",
+      "visible": true
+    },
+    {
+      "panel": "lab",
+      "visible": true
+    },
+    {
+      "panel": "lineage",
+      "visible": true
+    }
+  ],
+  "safe_click_checks": [
+    {
+      "name": "pause_refresh_toggle",
+      "passed": true
+    },
+    {
+      "name": "judge_mode_navigation",
+      "passed": true
+    },
+    {
+      "name": "new_agent_clears_form",
+      "passed": true
+    },
+    {
+      "name": "new_endpoint_clears_form",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "failure_count": 0
+}

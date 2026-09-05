@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mosaic-omega"
+version = "0.2.0"
+description = "MOSAIC-Ω V3 authoritative multi-agent runtime with recovery, verification and read-only observability console"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "MOSAIC-Ω Team"}]
+dependencies = [
+  "jsonschema>=4.20,<5",
+]
+
+[project.optional-dependencies]
+deepseek = ["openai>=1.40", "python-dotenv>=1.0,<2", "socksio>=1.0,<2"]
+mqtt = ["paho-mqtt>=2.0,<3.0"]
+memory = ["redis>=5,<6"]
+scheduler = ["ortools>=9.10,<10", "sqlalchemy>=2,<3", "psycopg[binary]>=3.1,<4"]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+all = [
+  "openai>=1.40",
+  "python-dotenv>=1.0,<2",
+  "socksio>=1.0,<2",
+  "paho-mqtt>=2.0,<3.0",
+  "redis>=5,<6",
+  "ortools>=9.10,<10",
+  "sqlalchemy>=2,<3",
+  "psycopg[binary]>=3.1,<4",
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"mosaic_omega.schemas" = ["*.json", "*.md"]
+"mosaic_omega.todag" = ["*.json", "static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

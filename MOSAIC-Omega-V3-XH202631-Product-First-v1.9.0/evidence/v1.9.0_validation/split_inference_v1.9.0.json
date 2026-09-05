@@ -1,0 +1,43 @@
+{
+  "benchmark": "split_inference_reference",
+  "implementation": "actual_cross_process_reference_mlp",
+  "claim_boundary": "REFERENCE_MLP_NOT_LLM_SPLIT",
+  "partition_policy": "pipeline_split",
+  "split_layer_index": 2,
+  "architecture_dims": [
+    8,
+    16,
+    16,
+    8,
+    4
+  ],
+  "device_stage_layers": [
+    0,
+    1
+  ],
+  "cloud_stage_layers": [
+    2,
+    3
+  ],
+  "device_stage_ms_measured": 0.04084199997578253,
+  "activation_payload_bytes_measured": 232,
+  "cloud_process_wall_ms_measured": 632.4380519999977,
+  "cloud_compute_ms_measured": 0.02624000001105742,
+  "total_split_ms_measured": 632.6159609999422,
+  "process_boundary_verified": true,
+  "monolithic_output": [
+    0.02677450025846556,
+    -0.5424931875513631,
+    -0.025688823644716044,
+    0.297017624380953
+  ],
+  "split_output": [
+    0.02677450025846556,
+    -0.5424931875513631,
+    -0.025688823644716044,
+    0.297017624380953
+  ],
+  "max_abs_error": 0.0,
+  "verified_equivalent": true,
+  "measurement_semantics": "wall_clock_perf_counter_and_serialized_byte_length"
+}

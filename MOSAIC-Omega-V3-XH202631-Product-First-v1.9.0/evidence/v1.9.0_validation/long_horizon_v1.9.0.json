@@ -1,0 +1,48 @@
+{
+  "benchmark_name": "MOSAIC-Ω single-run long-horizon measured benchmark",
+  "measurement_mode": "single_authoritative_eventstore_run_with_deterministic_executor_and_evidence_recovery",
+  "single_monolithic_run_claimed": true,
+  "executor_truth_class": "DETERMINISTIC_TOOL_EXECUTOR",
+  "competition_real_api": false,
+  "timestamp": "2026-09-05 09:15:27",
+  "run_id": "bench-long-monolithic-001",
+  "dag_shape": {
+    "stages": 16,
+    "lanes": 4
+  },
+  "target_event_count": 1000,
+  "pre_fault_event_count_measured": 1039,
+  "achieved_event_count_measured": 1153,
+  "target_reached": true,
+  "total_task_count_measured": 64,
+  "completed_task_count_measured": 64,
+  "all_succeeded_measured": true,
+  "fault_injection": {
+    "type": "evidence_invalidation",
+    "injected_count_measured": 1,
+    "recovered_count_measured": 1,
+    "recovered_by_reexecution": true,
+    "invalidated_evidence_id": "evi_a5dade50d0d0459b8af727cbad68f98f",
+    "affected_task_ids": [
+      "long_s09_l01",
+      "long_s10_l01",
+      "long_s11_l01",
+      "long_s12_l01",
+      "long_s13_l01",
+      "long_s14_l01",
+      "long_s15_l01",
+      "long_s16_l01"
+    ]
+  },
+  "total_messages_measured": 67,
+  "total_message_volume_kb_measured": 115.87,
+  "estimated_token_equivalent": 48035,
+  "token_metric_is_estimate": true,
+  "token_metric_source": "sum(TaskNodeView.estimated_tokens) + 35 * measured EventStore event count",
+  "total_duration_s_measured": 19.653,
+  "avg_event_latency_ms_derived": 17.05,
+  "start_memory_mb_measured": 117.23,
+  "end_memory_mb_measured": 237.68,
+  "total_storage_mb_measured": 28.84,
+  "provenance_note": "All event/task/message counts come from one authoritative run_id. The executor is deterministic and is not evidence of a real LLM/API call."
+}

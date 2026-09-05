@@ -1,0 +1,177 @@
+{
+  "release": "MOSAIC-Omega-V3-XH202631-Product-First-v1.9.0",
+  "generated_at_utc": "2026-09-05T09:45:41.076428+00:00",
+  "overall_status": "LOCAL_RELEASE_ACCEPTED_EXTERNAL_STRICT_REVALIDATION_REQUIRED",
+  "local_release_acceptance_passed": true,
+  "competition_runtime_strict_passed": false,
+  "truthfulness_policy": "fail_closed",
+  "tests": {
+    "release": "MOSAIC-Omega-V3-XH202631-Product-First-v1.9.0",
+    "generated_at_utc": "2026-09-05T09:44:19.092558+00:00",
+    "execution_mode": "process-isolated pytest; third-party plugin autoload disabled",
+    "unit": {
+      "collected": 95,
+      "passed": 94,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "duration_s_measured": 5.476
+    },
+    "integration": {
+      "collected": 8,
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_s_measured": 26.542
+    },
+    "total": {
+      "collected": 103,
+      "passed": 102,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "duration_s_measured": 32.018
+    },
+    "all_local_tests_passed": true,
+    "skip_note": "The single skipped unit test requires optional OR-Tools; strict OR-Tools is an external competition-machine gate in this environment.",
+    "sources": [
+      "evidence/v1.9.0_validation/unit_v1.9.0.xml",
+      "evidence/v1.9.0_validation/integration_v1.9.0.xml"
+    ]
+  },
+  "ui": {
+    "layout_passed": true,
+    "source_run_id": "v190-ros-tool-001",
+    "source_execution_verdict": "CONCRETE_TOOL_EXECUTION_VERIFIED",
+    "surface_checks": 42,
+    "horizontal_overflow_failures": 0,
+    "runtime_error_failures": 0,
+    "interaction_passed": true,
+    "editable_fields": 16,
+    "visible_user_view_actions": 47,
+    "technical_panels": 10,
+    "interaction_failure_count": 0
+  },
+  "cross_domain_deterministic_tool_runs": {
+    "ros_repair": {
+      "run_id": "v190-ros-tool-001",
+      "tasks": 6,
+      "all_succeeded": true,
+      "tool_executed_events": 6,
+      "verification_results": 6,
+      "evidence": 6
+    },
+    "financial_research": {
+      "run_id": "v190-financial-tool-001",
+      "tasks": 6,
+      "all_succeeded": true,
+      "tool_executed_events": 6,
+      "verification_results": 6,
+      "evidence": 6
+    }
+  },
+  "controlled_validation": {
+    "long_horizon": {
+      "run_id": "bench-long-monolithic-001",
+      "events_measured": 1153,
+      "tasks_succeeded": 64,
+      "tasks_total": 64,
+      "messages_measured": 67,
+      "duration_s_measured": 19.653,
+      "estimated_token_equivalent": 48035,
+      "token_metric_is_estimate": true,
+      "evidence_fault_recovered": 1
+    },
+    "low_entropy_replay": {
+      "full_mesh_transmissions": 20,
+      "mosaic_sparse_transmissions": 10,
+      "transmission_reduction_pct_replay": 50.0,
+      "byte_reduction_pct_replay": 50.0,
+      "measurement_mode": "same-message-set routing replay"
+    },
+    "memory_ablation": {
+      "full_history_estimated_tokens": 7808,
+      "context_pack_estimated_tokens": 721,
+      "key_fact_recall_pct": 100.0,
+      "estimated_reduction_pct": 90.77,
+      "provider_api_tokens_measured": false
+    },
+    "scheduler": {
+      "ortools_available": false,
+      "best_available_policy_by_objective": "round_robin",
+      "truth_boundary": "Round-Robin/Greedy are not labeled OR-Tools when OR-Tools is unavailable."
+    },
+    "reference_split": {
+      "verified_equivalent": true,
+      "process_boundary_verified": true,
+      "max_abs_error": 0.0,
+      "activation_payload_bytes_measured": 232,
+      "claim_boundary": "REFERENCE_MLP_NOT_LLM_SPLIT"
+    },
+    "agent_offline_adaptation": {
+      "run_id": "v190-ros-agent-offline-001",
+      "all_succeeded": true,
+      "task_count": 6,
+      "event_count": 88,
+      "adaptation_event_count": 9,
+      "truth_note": "Agent-offline adaptation is shown as FAULT_INJECTED -> topology rebuild / subsequent scheduler assignments. It is not relabeled as RecoveryEngine retry unless RECOVERY_PLANNED/TASK_RECOVERED actually exist."
+    }
+  },
+  "artifact_truth_gate": {
+    "passed": true,
+    "passed_checks": 33,
+    "total_checks": 33
+  },
+  "external_strict_runtime": {
+    "status": "BLOCKED_FAIL_CLOSED",
+    "passed": false,
+    "checks": [
+      {
+        "name": "ortools_importable",
+        "passed": false
+      },
+      {
+        "name": "deepseek_provider_selected",
+        "passed": true
+      },
+      {
+        "name": "deepseek_key_present",
+        "passed": false
+      },
+      {
+        "name": "deepseek_official_endpoint",
+        "passed": true,
+        "endpoint_host": "api.deepseek.com"
+      }
+    ],
+    "instruction": "Run START_MOSAIC.bat, configure DeepSeek in Settings, test the connection, and keep the official api.deepseek.com endpoint."
+  },
+  "external_claims_not_locally_proven": [
+    "fresh public DeepSeek API run on current package",
+    "strict OR-Tools run in this build environment",
+    "physical remote MQTT DEVICE/EDGE/CLOUD joint acceptance",
+    "real LLM layer split"
+  ],
+  "canonical_evidence": [
+    "evidence/test_matrix_v1.9.0.json",
+    "evidence/final_truth_gate_v1.9.0.json",
+    "evidence/ui_layout_audit_v1.9.0.json",
+    "evidence/ui_interaction_audit_v1.9.0.json",
+    "evidence/long_horizon_v1.9.0.json",
+    "evidence/topology_ablation_v1.9.0.json",
+    "evidence/memory_ablation_v1.9.0.json",
+    "evidence/scheduler_ablation_v1.9.0.json",
+    "evidence/split_inference_reference_v1.9.0.json",
+    "evidence/ros_tool_scenario_v1.9.0.json",
+    "evidence/financial_tool_scenario_v1.9.0.json",
+    "evidence/agent_offline_adaptation_v1.9.0.json",
+    "evidence/final_runtime_acceptance.json",
+    "evidence/release_package_audit_v1.9.0.json"
+  ],
+  "release_package_audit": {
+    "all_passed": true,
+    "passed": 12,
+    "total": 12
+  }
+}

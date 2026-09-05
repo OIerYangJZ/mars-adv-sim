@@ -1,0 +1,12 @@
+{
+  "privacy_classification": "DEVICE_ONLY_CONFIDENTIAL",
+  "encrypted_payload": "ENC_V3_REVENUE_450M_EBITDA_120M_RND_85M_DEBT_RATIO_0.28",
+  "decryption_key_id": "LOCAL_DEVICE_SECURE_ELEMENT_KEY_01",
+  "core_metrics": {
+    "revenue_cny_million": 450.0,
+    "ebitda_cny_million": 120.0,
+    "rnd_expenditure_cny_million": 85.0,
+    "asset_liability_ratio": 0.28,
+    "cash_flow_cny_million": 110.0
+  }
+}

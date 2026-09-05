@@ -1,0 +1,35 @@
+{
+  "release": "MOSAIC-Omega-V3-XH202631-Product-First-v1.9.0",
+  "generated_at_utc": "2026-09-05T09:44:19.092558+00:00",
+  "execution_mode": "process-isolated pytest; third-party plugin autoload disabled",
+  "unit": {
+    "collected": 95,
+    "passed": 94,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1,
+    "duration_s_measured": 5.476
+  },
+  "integration": {
+    "collected": 8,
+    "passed": 8,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_s_measured": 26.542
+  },
+  "total": {
+    "collected": 103,
+    "passed": 102,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1,
+    "duration_s_measured": 32.018
+  },
+  "all_local_tests_passed": true,
+  "skip_note": "The single skipped unit test requires optional OR-Tools; strict OR-Tools is an external competition-machine gate in this environment.",
+  "sources": [
+    "evidence/v1.9.0_validation/unit_v1.9.0.xml",
+    "evidence/v1.9.0_validation/integration_v1.9.0.xml"
+  ]
+}
