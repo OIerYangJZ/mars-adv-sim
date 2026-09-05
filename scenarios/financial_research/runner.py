@@ -64,7 +64,12 @@ def _task(
 
 
 def build_plan(research_tool_relative: str) -> list[dict[str, Any]]:
-    py = Path(sys.executable).name
+    # Spawn the *running* interpreter by absolute path, as scenarios/ros_repair
+    # does. A bare basename requires that name to be resolvable on PATH, which
+    # fails on macOS (no `python` since 12.3), on python3-only distributions and
+    # under a non-activated venv. The command allowlist is unaffected: it matches
+    # on Path(command[0]).name, so an absolute path is still checked.
+    py = sys.executable
     return [
         _task(
             "ingest",

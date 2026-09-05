@@ -165,8 +165,13 @@ class CompetitionControlPlane:
         # handled first; unquoted paths stop at common log delimiters.
         text = re.sub(r'(?i)(["\'])?[A-Z]:\\[^\r\n"\'<>|]+\1?', '<local-path>', text)
         # POSIX machine-local roots used by user profiles, temp/build/runtime data.
+        # macOS resolves its per-user temp root to /var/folders/... and, once
+        # symlinks are resolved, /private/var/folders/..., so both spellings are
+        # listed explicitly. A bare "/private" segment stays intact on purpose:
+        # it is a legitimate URL path, not a machine path.
         text = re.sub(
-            r'(?<![A-Za-z0-9])/(?:home|tmp|var/tmp|Users|mnt|opt|srv|private/tmp|usr/local)/(?:[^\s"\'<>]+(?:\s+(?=[^,;|]\S)[^\s"\'<>]+)*)',
+            r'(?<![A-Za-z0-9])/(?:home|tmp|var/tmp|var/folders|Users|mnt|opt|srv'
+            r'|private/tmp|private/var|usr/local)/(?:[^\s"\'<>]+(?:\s+(?=[^,;|]\S)[^\s"\'<>]+)*)',
             '<local-path>', text, flags=re.IGNORECASE,
         )
         return text
