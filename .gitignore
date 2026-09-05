@@ -30,11 +30,20 @@ Thumbs.db
 .benchmark_workspace/
 .full_chaos_workspace/
 *.log
-*.html
 logs/
 telemetry/
 tmp/
 cache/
+
+# Report renderings produced by scripts/build_all_pdfs.py.
+# Scoped to the temp artifacts only: a bare `*.html` also swallowed the
+# console frontend source (apps/console/frontend/index.html).
+*_temp.html
+
+# evidence/ is the release record declared by SHA256_MANIFEST.txt, so the
+# generic log rules above must not apply inside it.
+!evidence/**/*.log
+!evidence/**/logs/
 
 # Generated archives / outputs
 *.zip
